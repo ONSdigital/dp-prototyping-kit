@@ -1,25 +1,25 @@
 import fetch from "node-fetch"
 import R from "ramda"
+import fs from "fs"
 
 import dotenv from "dotenv"
 dotenv.config()
 
-let codes
+export const partialFilename = "area-profiles-partial"
+export const fullFilename = "area-profiles-full"
 
-if (process.env.NODE_ENV !== "prod") {
-  codes = {
-    regions: ["W92"],
-    upperTiers: ["W06"],
-    lowerTiers: [],
-    wards: ["W05"]
-  }
-} else {
-  codes = {
-    regions: ["E12", "W92"],
-    upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
-    lowerTiers: ["E07"],
-    wards: ["E05", "W05"]
-  }
+const PARTIAL = {
+  regions: ["W92"],
+  upperTiers: ["W06"],
+  lowerTiers: [],
+  wards: ["W05"]
+}
+
+const ALL = {
+  regions: ["E12", "W92"],
+  upperTiers: ["E06", "E09", "E10", "E08", "E11", "W06"],
+  lowerTiers: ["E07"],
+  wards: ["E05", "W05"]
 }
 
 const API = "http://statistics.data.gov.uk/sparql.json?query="
@@ -79,16 +79,28 @@ const makeQuery = async (query) => {
 
 const fetchArea = (codes, limit) => makeQuery(getQuery(codes, limit))
 
-const fetchData = async () => {
-  const data = {
-    countries: await makeQuery(COUNTRY_QUERY),
-    regions: await fetchArea(codes.regions),
-    upperTiers: await fetchArea(codes.upperTiers),
-    lowerTiers: await fetchArea(codes.lowerTiers),
-    wards: await fetchArea(codes.wards)
-  }
+const fetchData = async (codes) => ({
+  countries: await makeQuery(COUNTRY_QUERY),
+  regions: await fetchArea(codes.regions),
+  upperTiers: await fetchArea(codes.upperTiers),
+  lowerTiers: await fetchArea(codes.lowerTiers),
+  wards: await fetchArea(codes.wards)
+})
 
-  return data
-}
+const writeFile = (data, name) =>
+  fs.writeFile(
+    `./src/prototypes/geography/data/${name}.json`,
+    JSON.stringify(data),
+    (err) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+    }
+  )
 
-export default fetchData
+const fullData = await fetchData(ALL)
+const partialData = await fetchData(PARTIAL)
+
+writeFile(fullData, fullFilename)
+writeFile(partialData, partialFilename)

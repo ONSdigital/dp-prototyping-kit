@@ -6,12 +6,14 @@ let wards = []
 
 module.exports = function () {
   try {
-    countries = require("./data/countries.json")
-    regions = require("./data/regions.json")
-    upperTiers = require("./data/upper-tier.json")
-    lowerTiers = require("./data/lower-tier.json")
-    wards = require("./data/wards.json")
-  } catch (error) {}
+    countries = require("./data/area-profiles/countries.json")
+    regions = require("./data/area-profiles/regions.json")
+    upperTiers = require("./data/area-profiles/upper-tier.json")
+    lowerTiers = require("./data/area-profiles/lower-tier.json")
+    wards = require("./data/area-profiles/wards.json")
+  } catch (err) {
+    console.log(err)
+  }
 
   return {
     countries,

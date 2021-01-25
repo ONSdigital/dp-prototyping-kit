@@ -4,14 +4,16 @@
   "description": "A kit for creating prototypes using Eleventy and TailwindCSS",
   "private": true,
   "scripts": {
-    "build": "npm-run-all clean -p geo:build build:*",
+    "build": "npm-run-all clean build:*",
+    "build:geo": "node src/prototypes/geography/scripts/build.mjs ",
+    "build:geo:partial": "yarn build:geo --partial",
     "build:11ty": "eleventy --quiet",
     "build:rollup": "rollup -c",
     "clean": "rimraf dist",
     "dev": "npm-run-all clean -p dev:*",
     "dev:11ty": "eleventy --serve --quiet",
     "dev:rollup": "rollup -c -w",
-    "geo:build": "node src/prototypes/geography/scripts/build.mjs"
+    "fetch:geo": "node src/prototypes/geography/scripts/fetch-data.mjs"
   },
   "author": "Hamish Taplin",
   "license": "ISC",

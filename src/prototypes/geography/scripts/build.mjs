@@ -1,14 +1,11 @@
-import dotenv from "dotenv"
-dotenv.config()
-
 import R from "ramda"
 import fs from "fs"
 import slugify from "slugify"
-
-import fetchData from "./fetch-data.mjs"
 import geoCodes from "./area-codes.mjs"
 
 const BASE_PATH = "/prototypes/geography/"
+const DATA_PATH = "./src/prototypes/geography/data/"
+
 const toSlug = (str) => slugify(str, { lower: true, remove: /[*+~.,()'"!:@]/g })
 const findById = (list, id) => R.find(R.propEq("id", id), list)
 const sortByName = R.sortBy(R.prop("name"))
@@ -76,7 +73,6 @@ const mapArea = R.map(({ areacode, areaname, parentcode }) => {
     areaCode: areacode.value.substr(0, 3),
     name: areaname.value,
     slug,
-
     parent: R.omit(["parent"], parent),
     children,
     breadcrumbs,
@@ -87,8 +83,8 @@ const mapArea = R.map(({ areacode, areaname, parentcode }) => {
 })
 
 const writeFile = ({ name, data }) =>
-  fs.writeFile(
-    `./src/prototypes/geography/data/${name}.json`,
+  fs.writeFileSync(
+    `${DATA_PATH}/area-profiles/${name}.json`,
     JSON.stringify(data),
     (err) => {
       if (err) {
@@ -98,7 +94,9 @@ const writeFile = ({ name, data }) =>
     }
   )
 
-const rawData = await fetchData()
+const isPartial = Array.from(process.argv).includes("--partial")
+const fileName = isPartial ? "area-profiles-partial" : "area-profiles-full"
+const rawData = JSON.parse(fs.readFileSync(`${DATA_PATH}/${fileName}.json`))
 
 countries = mapArea(rawData.countries)
 regions = mapArea(rawData.regions)
