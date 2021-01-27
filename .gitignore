@@ -1,6 +1,6 @@
 node_modules
 dist
 /.env
-src/prototypes/geography/data/area-profiles/*
+src/prototypes/area-profiles/data/areas/*
 # Local Netlify folder
 .netlify

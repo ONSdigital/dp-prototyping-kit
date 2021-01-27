@@ -1,5 +1,5 @@
 const fs = require("fs")
-const dir = "src/prototypes/geography/data/area-profiles"
+const dir = "src/prototypes/area-profiles/data/area-profiles"
 
 try {
   const files = fs.readdirSync(dir)

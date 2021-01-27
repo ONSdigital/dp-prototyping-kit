@@ -1,0 +1,79 @@
+<div class="wrapper" id="top">
+    {% if breadcrumbs %}
+        {% include "breadcrumbs.njk" %}
+    {% endif %}
+
+    <header class="mb-8" >
+        <h1 class="mb-1 p-0 text-3xl font-bold">{{area.name}}</h1>
+        <h2 class="mt-0 text-lg">{{area.type | capitalize}}
+            {% if area.id %} ({{area.id}}) {% endif %}
+        </h2>
+    </header>
+
+    <div class="md:grid gap-4 grid-cols-3 mb-4">
+        <div class="col-span-1 mb-6">
+            <h2 class="text-base font-bold mb-2">Contents</h2>
+            <ul class="m-0 mb-4 p-0 leading-tight">
+                {% for item in pageContent %}
+                    <li class="m-0 mb-2 p-0 relative">
+                        <span class="absolute">—</span>
+                        <a class="pl-8 inline-block" href="#{{item|slug}}">{{item}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-span-2 mb-6" id="summary">
+            <h2 class="text-md font-bold mb-2">Summary</h2>
+            <p>This area profile covers the {{area.type}} of {{area.name}} and is compiled of data from the 2021 Census.</p>
+            <p>The area profile covers areas within {{area.name}} and topics such as the population, households, housing, economy, education and health. </p>
+            <p>The profile also contains all area related datasets.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="relative">
+    <div class="ratio-100 md:ratio-40 mb-8 bg-gallery">
+        <div id="map" data-areaid="{{area.id}}"></div>
+    </div>
+    <div id="map-overlay" class="hidden absolute bg-white p-8 shadow-lg rounded-md bottom-4 left-4 right-4 md:top-10 md:left-10 md:bottom-auto md:w-1/3 z-50">
+        <button id="map-overlay-close" class="absolute top-3 right-3 icon-close rounded-full bg-white hover:bg-mercury w-4 h-4 p-4">
+            <span class="sr-only">Close</span>
+        </button>
+        <h2 id="map-overlay-title" class="text-xl font-bold mb-2">Area name</h2>
+        <p id="map-overlay-subtitle" class="text-base font-normal mb-4">Area type</p>
+        <a id="map-overlay-link" href="/" class="text-base">Explore this area</a>
+    </div>
+</div>
+
+<div class="wrapper mb-8">
+    {% if area.children.length %}
+        <div class="mb-8" id="areas-within-{{area.name|slug}}">
+            <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
+            <h3 class="text-base font-bold mb-2">{{childrenType}}</h3>
+            <ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3 leading-relaxed">
+                {% for child in area.children %}
+                    <li class="m-0 p-0">
+                        <a href="{{child.permalink}}">{{child.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <div class="mb-8">
+        <a class="text-base icon-arrow p-3 pl-2 border border-blumine border-opacity-30  leading-none" href="#top">Back to top</a>
+    </div>
+
+    {% include "./tables.njk" %}
+
+</div>
+
+{% block head %}
+    <script>
+        window.__areaChildren__ = {{area.children | dump | safe }}
+        {% if area.parent.children|length > 0 %}
+            window.__areaSiblings__ = {{area.parent.children | dump | safe }}
+        {% endif %}
+    </script>
+{% endblock %}
