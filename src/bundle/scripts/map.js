@@ -142,7 +142,7 @@ const makeQuery = async (query) => {
 }
 
 const findAreaById = (id) =>
-  [...children, ...siblings].find((area) => area.id === id)
+  [].concat(children, siblings).find((area) => area.id === id)
 
 const getCenter = (polygon) => {
   // Hack: In case polygon is wrapped in an array (ie. when it is part of a multipolygon)
@@ -411,10 +411,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             { source: "area-children", id: hoveredAreaId },
             { hover: false }
           )
-          map.setFeatureState(
-            { source: "area-siblings", id: hoveredAreaId },
-            { hover: false }
-          )
+
+          if (siblings) {
+            map.setFeatureState(
+              { source: "area-siblings", id: hoveredAreaId },
+              { hover: false }
+            )
+          }
         }
 
         hoveredAreaId = e.features[0].id
@@ -434,10 +437,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           { source: "area-children", id: hoveredAreaId },
           { hover: false }
         )
-        map.setFeatureState(
-          { source: "area-siblings", id: hoveredAreaId },
-          { hover: false }
-        )
+
+        if (siblings) {
+          map.setFeatureState(
+            { source: "area-siblings", id: hoveredAreaId },
+            { hover: false }
+          )
+        }
       }
       hoveredAreaId = null
     }
@@ -455,10 +461,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         { source: "area-children", id: selectedStateId },
         { selected: false }
       )
-      map.setFeatureState(
-        { source: "area-siblings", id: selectedStateId },
-        { selected: false }
-      )
+
+      if (siblings) {
+        map.setFeatureState(
+          { source: "area-siblings", id: selectedStateId },
+          { selected: false }
+        )
+      }
 
       selectedStateId = id
 
@@ -466,7 +475,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const left = isMobile ? 0 : window.innerWidth / 3
       const top = isMobile ? -50 : 0
 
-      map.fitBounds(bbox(parse(findAreaById(selectedStateId).geometry)), {
+      map.fitBounds(bbox(parse(findAreaById(id).geometry)), {
         animate: true,
         padding: {
           top,
@@ -476,10 +485,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       })
 
-      map.setFeatureState(
-        { source: layer.source, id: selectedStateId },
-        { selected: true }
-      )
+      map.setFeatureState({ source: layer.source, id }, { selected: true })
     }
 
     if (children.length) {
