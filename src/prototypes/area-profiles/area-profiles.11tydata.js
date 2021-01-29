@@ -12,7 +12,7 @@ module.exports = function () {
     lowerTiers = require("./data/areas/lower-tier.json")
     wards = require("./data/areas/wards.json")
   } catch (err) {
-    console.log(err)
+    // do nothing
   }
 
   return {
