@@ -472,17 +472,22 @@ document.addEventListener("DOMContentLoaded", async () => {
       selectedStateId = id
 
       const isMobile = window.innerWidth <= 768
-      const left = isMobile ? 0 : window.innerWidth / 3
-      const top = isMobile ? -50 : 0
 
       map.fitBounds(bbox(parse(findAreaById(id).geometry)), {
         animate: true,
-        padding: {
-          top,
-          bottom: 100,
-          left,
-          right: 100
-        }
+        padding: isMobile
+          ? {
+              top: -100,
+              right: 10,
+              bottom: 300,
+              left: 10
+            }
+          : {
+              top: 100,
+              right: 100,
+              bottom: 100,
+              left: window.innerWidth / 3
+            }
       })
 
       map.setFeatureState({ source: layer.source, id }, { selected: true })
@@ -505,3 +510,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     })
   })
 })
+
+const onInterval = () => {
+  const mapElement = document.getElementById("map")
+  const overlay = document.getElementById("map-overlay")
+
+  const height = overlay.clientHeight
+
+  console.log(height)
+
+  if (height === 0) return false
+}
+
+// setInterval(onInterval, 1000)

@@ -44,6 +44,25 @@ const siblingsType = ({ area }) => {
   return areaTypes[area.parent.children[0].areaCode]
 }
 
+const keyStats = [
+  {
+    title: "Resident population as of 2021",
+    value: "8,173,941"
+  },
+  {
+    title: "Population increase since 2011",
+    value: "8%"
+  },
+  {
+    title: "Total area size (Hectares)",
+    value: "157,215.08"
+  },
+  {
+    title: "Population density (People per hectare)",
+    value: "52.0"
+  }
+]
+
 module.exports = {
   page: { map: true },
   permalink: "{{area.permalink}}",
@@ -53,5 +72,6 @@ module.exports = {
     siblingsType,
     pageContent
   },
-  tableSections
+  tableSections,
+  keyStats
 }
