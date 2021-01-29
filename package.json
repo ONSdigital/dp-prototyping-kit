@@ -4,7 +4,7 @@
   "description": "A kit for creating prototypes using Eleventy and TailwindCSS",
   "private": true,
   "scripts": {
-    "build": "npm-run-all clean build:*",
+    "build": "npm-run-all --serial clean build:*",
     "build:geo": "node src/prototypes/area-profiles/scripts/build.mjs ",
     "build:11ty": "eleventy --quiet",
     "build:rollup": "rollup -c",
