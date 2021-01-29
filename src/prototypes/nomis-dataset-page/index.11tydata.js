@@ -22,7 +22,7 @@ module.exports = {
         notetitle: "Statistical Disclosure Control",
         release_frequency: "Decennially",
         next_release: "To Be Confirmed",
-        release_date: "2013-01-30 09:30:00 +0000 UTC",
+        release_date: "30 January 2013",
         keywords: [
           "Adult",
           "Dependent child",
