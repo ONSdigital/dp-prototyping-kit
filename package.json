@@ -6,7 +6,6 @@
   "scripts": {
     "build": "npm-run-all clean build:*",
     "build:geo": "node src/prototypes/area-profiles/scripts/build.mjs ",
-    "build:geo:partial": "yarn build:geo --partial",
     "build:11ty": "eleventy --quiet",
     "build:rollup": "rollup -c",
     "clean": "rimraf dist",
