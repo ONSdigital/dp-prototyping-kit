@@ -29,28 +29,64 @@
             <p>The profile also contains all area related datasets.</p>
         </div>
     </div>
-
 </div>
 
-<div class="relative">
-    <div class="mb-8 bg-gallery" style="height:650px">
-        <div id="map" class="h-full w-full" data-areaid="{{area.id}}"></div>
+<section id="key-stats">
+    <div class="wrapper">
+        <header>
+            <h2 class="text-md font-bold mb-4">Key statistics</h2>
+        </header>
+        <div class="mb-8">
+            <ul class="list-none divide-y divide-silver md:flex md:divide-y-0 md:divide-x md:-ml-4">
+                {% for stat in keyStats %}
+                    <li class="p-0 pt-2 mb-2 md:m-0 md:mb-2 md:px-4">
+                        <h3 class="text-base font-normal md:mb-2">{{stat.title}}</h3>
+                        <div class="text-lg font-bold">{{stat.value}}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-    <div id="map-overlay" class="hidden absolute bg-white p-8 shadow-lg rounded-md bottom-4 left-4 right-4 md:top-10 md:left-10 md:bottom-auto md:w-1/3 z-50">
-        <button id="map-overlay-close" class="absolute top-3 right-3 icon-close rounded-full bg-white hover:bg-mercury w-4 h-4 p-4">
-            <span class="sr-only">Close</span>
-        </button>
-        <h2 id="map-overlay-title" class="text-xl font-bold mb-2">Area name</h2>
-        <p id="map-overlay-subtitle" class="text-base font-normal mb-4">Area type</p>
-        <a id="map-overlay-link" href="/" class="text-base">Explore this area</a>
-    </div>
-</div>
+</section>
 
-<div class="wrapper mb-8">
-    {% if area.children.length %}
+<section class="mb-8">
+    <header class="sr-only">
+        <h2>Map of {{area.name}}</h2>
+    </header>
+    <div class="relative" style="height:600px">
+        <div class="absolute bottom-0 sm:top-0 left-0 w-full sm:p-4 z-50 sm:sticky sm:w-1/2 md:w-1/3">
+            <div id="map-overlay" class="hidden relative border-b-1 bg-white p-4 shadow-sm sm:shadow-md">
+                <button id="map-overlay-close" class="absolute top-3 right-3 icon-close rounded-full bg-white hover:bg-mercury w-4 h-4 p-4">
+                    <span class="sr-only">Close</span>
+                </button>
+                <div class="mb-4 md:mb-8">
+                    <h2 id="map-overlay-title" class="text-lg font-bold pr-8 mb-1 md:mb-2">Area name</h2>
+                    <p id="map-overlay-subtitle" class="text-base md:text-md font-normal">Area type</p>
+                </div>
+                <div class="mb-4 md:mb-8">
+                    <ul class="list-none">
+                        {% for stat in keyStats %}
+                            <li class="p-0 m-0 mb-1 md:mb-2">
+                                <h3 class="text-sm md:text-base font-normal">{{stat.title}}</h3>
+                                <div class="text-base md:text-md font-bold">{{stat.value}}</div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a id="map-overlay-link" href="/" class="text-base">Explore this area</a>
+            </div>
+        </div>
+        <div class="absolute top-0 bg-gallery w-full h-full" id="map" data-areaid="{{area.id}}"></div>
+    </div>
+</section>
+
+{% if area.children.length %}
+    <section class="wrapper mb-8">
         <div class="mb-8" id="areas-within-{{area.name|slug}}">
-            <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
-            <h3 class="text-base font-bold mb-2">{{childrenType}}</h3>
+            <header>
+                <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
+                <h3 class="text-base font-bold mb-2">{{childrenType}}</h3>
+            </header>
             <ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3 leading-relaxed">
                 {% for child in area.children %}
                     <li class="m-0 p-0">
@@ -59,15 +95,15 @@
                 {% endfor %}
             </ul>
         </div>
-    {% endif %}
+        <div class="mb-8">
+            <a class="text-base icon-arrow p-3 pl-2 border border-blumine border-opacity-30  leading-none" href="#top">Back to top</a>
+        </div>
+    </section>
+{% endif %}
 
-    <div class="mb-8">
-        <a class="text-base icon-arrow p-3 pl-2 border border-blumine border-opacity-30  leading-none" href="#top">Back to top</a>
-    </div>
-
+<section class="wrapper">
     {% include "./tables.njk" %}
-
-</div>
+</section>
 
 {% block head %}
     <script>
