@@ -1,4 +1,7 @@
 {% extends "src/layouts/prototype.njk" %}
+{%- block head -%}
+<style>.meta__item:last-of-type {border: none;}.nav-secondary__item {display:inline;}</style>
+{%- endblock -%}
 
 {% block body %}
     <div class="wrapper mb-8">
@@ -7,13 +10,12 @@
         <header class="mb-8">
         <h1 class="page-intro__title margin-bottom--3">
           <span class="page-intro__type padding-top--0 padding-bottom--0">Census dataset:</span>
-          <strong>{{nomisdataset.title}}</strong>
+          <strong>{{nomisapi.title}}</strong>
           </h1>
             {# <h1 class="mb-1 p-0 text-3xl font-bold">NOMIS Dataset thing</h1> #}
         </header>
         {# <div class="mb-16" id="areas">
             <h2 class="text-md font-bold mb-2">Areas within </h2>
-
         </div> #}
     </div>
     <div class="meta-wrap meta-wrap--thin" style="background: transparent; border-top: none;">
@@ -21,15 +23,15 @@
       <dl class="col-wrap">
       <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
         <dt class="meta__term inline">Release date:</dt>
-        <dd class="inline">{{nomisdataset.release_date}}</dd>
+        <dd class="inline">{{nomisapi.release_date}}</dd>
       </div>
       <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
         <dt class="meta__term inline">Release frequency:</dt>
-        <dd class="inline">{{nomisdataset.release_frequency}}</dd>
+        <dd class="inline">{{nomisapi.release_frequency}}</dd>
       </div>
       <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
         <dt class="meta__term inline">Next release:</dt>
-        <dd class="inline">{{nomisdataset.next_release}}</dd>
+        <dd class="inline">{{nomisapi.next_release}}</dd>
       </div>
       </dl>
       </div>
@@ -38,22 +40,23 @@
     <div class="col-wrap">
     <div class="col col--lg-two-thirds col--md-two-thirds">
       <section class="dataset-description">
-        <p class="text-base">{{nomisdataset.description}}</p>
+        <p class="text-base">{{nomisapi.description}}</p>
       </section>
       <section>
         <h2 class="font-weight-700 margin-bottom--2">Get the data</h2>
         <a href="https://www.nomisweb.co.uk/census/2011/ks106ew" class="btn btn--primary btn--thick font-weight-700" role="button" rel="external">Access this data on NOMIS <span class="icon icon-external--light-small"></span></a>
         <p>Access to this dataset is provided on NOMIS.</p>
         <h4 class="font-weight-700">Keywords</h4>
+        {# Keywords from NOMIS API #}
         <ul class="nav-secondary__list">
-        {%- for k in nomisdataset.keywords -%}
+        {%- for k in nomisapi.keywords -%}
           <li class="nav-secondary__item"><a href="https://www.ons.gov.uk/search?q=census+2011+{{k}}">{{k}}</a></li>
         {%- endfor -%}
         </ul>
         </ul>
         
-        <h3 class="font-weight-700">{{nomisdataset.notetitle}}</h3>
-        {{nomisdataset.note | safe}}
+        <h3 class="font-weight-700">{{nomisapi.usage_notes.title}}</h3>
+        {{nomisapi.usage_notes.note | safe}}
       </section>
     </div>
     <!-- Contact col -->
@@ -62,9 +65,9 @@
       <h3 class="tiles__title-h3 tiles__title-h3--nav">Contact details for this dataset</h3>
       <div class="tiles__content tiles__content--nav">
       <address>
-      <span class="contact-name block">Nomis</span>
-      <span class="contact-email block"><a href="mailto:support@nomisweb.co.uk?subject=KS106EW">support@nomisweb.co.uk</a></span>
-      <span class="contact-phone block" style="font-variant-numeric: tabular-nums;">+44(0) 191 3342680</span>
+      <span class="contact-name block">{{nomisapi.contacts.name}}</span>
+      <span class="contact-email block"><a href="mailto:{{nomisapi.contacts.email}}?subject=KS106EW">{{nomisapi.contacts.email}}</a></span>
+      <span class="contact-phone block" style="font-variant-numeric: tabular-nums;">{{nomisapi.contacts.telephone}}</span>
       </address>
       </div>
       </div>
