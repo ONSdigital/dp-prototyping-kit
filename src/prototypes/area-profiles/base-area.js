@@ -63,6 +63,25 @@ const keyStats = [
   }
 ]
 
+const childStats = [
+  {
+    title: "Resident population as of 2021",
+    value: "162,393"
+  },
+  {
+    title: "Population increase since 2011",
+    value: "2%"
+  },
+  {
+    title: "Total area size (Hectares)",
+    value: "39,234.01"
+  },
+  {
+    title: "Population density (People per hectare)",
+    value: "23.0"
+  }
+]
+
 module.exports = {
   page: { map: true },
   permalink: "{{area.permalink}}",
@@ -73,5 +92,6 @@ module.exports = {
     pageContent
   },
   tableSections,
-  keyStats
+  keyStats,
+  childStats
 }
