@@ -87,8 +87,8 @@ const fetchData = async (codes) => ({
   wards: await fetchArea(codes.wards)
 })
 
-const writeFile = (data, name) =>
-  fs.writeFile(
+const writeFile = async (data, name) =>
+  fs.promises.writeFile(
     `./src/prototypes/area-profiles/data/${name}.json`,
     JSON.stringify(data),
     (err) => {
@@ -102,5 +102,5 @@ const writeFile = (data, name) =>
 const fullData = await fetchData(ALL)
 const partialData = await fetchData(PARTIAL)
 
-writeFile(fullData, fullFilename)
-writeFile(partialData, partialFilename)
+await writeFile(fullData, fullFilename)
+await writeFile(partialData, partialFilename)

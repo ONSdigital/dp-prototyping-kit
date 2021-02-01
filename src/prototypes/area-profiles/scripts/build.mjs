@@ -101,6 +101,7 @@ const fileName = isPartial ? partialFilename : fullFilename
 
 const json = await fs.promises.readFile(`${DATA_PATH}/${fileName}.json`, "utf8")
 
+
 rawData = JSON.parse(json)
 countries = mapArea(rawData.countries)
 regions = mapArea(rawData.regions)

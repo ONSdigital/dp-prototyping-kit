@@ -1,0 +1,20 @@
+{% set activeTab = tabs | selectattr("active") | first %}
+
+<div>
+    <ul class="flex">
+        {% for tab in tabs %}
+            {% if tab.active %}
+                <li class="m-0 p-0 mr-2 -mb-px border-thunder border border-b-0 bg-white z-10">
+                    <h3 class="text-base font-bold m-0 py-2 px-4">{{tab.title}}</h3>
+                </li>
+            {% else %}
+                <li class="m-0 p-0 mr-2">
+                    <a href="" class="text-thunder hover:text-thunder bg-gallery hover:bg-iron py-2 px-4 block">{{tab.title}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <div class="border-t border-thunder py-4 bg-white relative">
+        {{activeTab.content|safe}}
+    </div>
+</div>
