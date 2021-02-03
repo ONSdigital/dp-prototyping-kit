@@ -54,10 +54,10 @@
         {%-endif-%}
         {# END keywords #}        
       </section>
-      <section class="mb-4">
+      {%-if nomisapi.usage_notes -%}<section class="mb-4">
         <h3 class="font-weight-700 text-md mb-2">{{nomisapi.usage_notes.title}}</h3>
         {{nomisapi.usage_notes.note | safe}}
-      </section>
+      </section>{%else%}{%-endif-%}
       <hr />
       <aside id="nomis" name="nomis" class="mt-8"><h4 class="text-md font-bold">Nomis</h4><p class="text-sm">Nomis is run by the University of Durham on behalf of the Office for National Statistics. First launched in 1981, Nomis houses an extensive range of government statistical information on the UK labour market including Employment, Unemployment, Earnings and Annual Population Survey.</p></aside>
     </div>
