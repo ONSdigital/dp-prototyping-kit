@@ -33,7 +33,7 @@
     "ramda": "^0.27.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.33.3",
-    "rollup-plugin-postcss": "https://github.com/isaacl/rollup-plugin-postcss",
+    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "slugify": "^1.4.6",
