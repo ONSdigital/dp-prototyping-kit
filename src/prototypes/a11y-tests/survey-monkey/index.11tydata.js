@@ -11,6 +11,7 @@ module.exports = {
         href: "../"
       }
     ],
+    a11yintro: "Tested as modal in the host page.",
     a11yreport: [
       {
         type: "error",
