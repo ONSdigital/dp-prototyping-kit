@@ -55,7 +55,7 @@ module.exports = {
       unit_of_measure: "Households",
       usage_notes: 
         {
-          note: "<p>In order to protect against disclosure of personal information from the 2011 Census, there has been swapping of records in the Census database between different geographic areas, and so some counts will be affected. In the main, the greatest effects will be at the lowest geographies, since the record swapping is targeted towards those households with unusual characteristics in small areas.</p><p>More details on the ONS Census disclosure control strategy may be found on the <a href=\"http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/statistical-disclosure-control/index.html\">Statistical Disclosure Control</a> page on the ONS web site.</p>",
+          note: "<p class=\"text-base\">In order to protect against disclosure of personal information from the 2011 Census, there has been swapping of records in the Census database between different geographic areas, and so some counts will be affected. In the main, the greatest effects will be at the lowest geographies, since the record swapping is targeted towards those households with unusual characteristics in small areas.</p><p class=\"text-base\">More details on the ONS Census disclosure control strategy may be found on the <a href=\"http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/statistical-disclosure-control/index.html\">Statistical Disclosure Control</a> page on the ONS web site.</p>",
           title: "Statistical Disclosure Control"
         }
     }
