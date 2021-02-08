@@ -1,5 +1,11 @@
 html {
   font-size: 18px;
+  line-height: 1.6;
+}
+
+body {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 a {
@@ -26,7 +32,9 @@ h5 {
 }
 
 p {
-  @apply m-0 p-0 mb-2 text-base;
+  font-size: inherit;
+  line-height: inherit;
+  @apply m-0 p-0 mb-2;
 }
 
 td.td-string {
