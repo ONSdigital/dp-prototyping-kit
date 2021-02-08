@@ -11,7 +11,7 @@ module.exports = {
         href: "../"
       }
     ],
-    a11yintro: "Tested as iframe in the host page and as the frame src separately.",
+    a11yintro: "Tested as iframe in the host page and as the frame src separately. Would require local 'modal' window to load this over the page content.",
     a11yreport: [
       {
         type: "warning",
