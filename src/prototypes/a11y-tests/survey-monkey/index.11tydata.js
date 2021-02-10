@@ -32,10 +32,16 @@ module.exports = {
         auditor: "VoiceOver (Mac)"
       },
       {
-        type: "",
-        issue: "",
+        type: "warning",
+        issue: "Question 8 (slider). Contrast too low but requires a numeric input on implementation.",
+        wcag: "1.4.3",
+        auditor: "Manual"
+      },
+      {
+        type: "warning",
+        issue: "Question 10 (Sort order) when using keyboard controls. Choosing an identical value to another select input in the set of choices removes that value. (i.e. setting select #3 to '2' when select #1 is '2' results in #1 being set to blank.) Aria is used to alert the user to another item being de-selected but does not provide sufficient context to enable a user to sort items. Suggest not using this question type if it can be avoided.",
         wcag: "",
-        auditor: ""
+        auditor: "VoiceOver"
       }
     ]
   }
