@@ -10,11 +10,10 @@ body {
 
 a {
   @apply underline;
-  @apply text-blumine;
+  @apply text-nightBlue;
 
   &:hover {
     @apply no-underline;
-    @apply text-matisse;
   }
 }
 

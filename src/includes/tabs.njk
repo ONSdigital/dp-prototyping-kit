@@ -4,17 +4,17 @@
     <ul class="flex">
         {% for tab in tabs %}
             {% if tab.active %}
-                <li class="m-0 p-0 mr-2 -mb-px border-thunder border border-b-0 bg-white z-10">
+                <li class="m-0 p-0 mr-2 -mb-px border-grey1 border border-b-0 bg-white z-10">
                     <h3 class="text-base font-bold m-0 py-2 px-4">{{tab.title}}</h3>
                 </li>
             {% else %}
                 <li class="m-0 p-0 mr-2">
-                    <a href="" class="text-thunder hover:text-thunder bg-gallery hover:bg-iron py-2 px-4 block">{{tab.title}}</a>
+                    <a href="" class="text-grey1 hover:text-grey1 bg-grey4 hover:bg-grey3 py-2 px-4 block">{{tab.title}}</a>
                 </li>
             {% endif %}
         {% endfor %}
     </ul>
-    <div class="border-t border-thunder py-4 bg-white relative">
+    <div class="border-t border-grey1 py-4 bg-white relative">
         {{activeTab.content|safe}}
     </div>
 </div>

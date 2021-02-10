@@ -1,3 +1,26 @@
+const colors = {
+    springGreen: "#A8BD3A",
+    aquaTeal: "#00A3A6",
+    skyBlue: "#27A0CC",
+    oceanBlue: "#206095",
+    nightBlue: "#003C57",
+    indigoBlue: "#3C388E",
+    plumPurple: "#902082",
+    flamingoPink: "#DF0667",
+    rubyRed: "#D0021B",
+    jaffaOrange: "#FE781F",
+    sunYellow: "#FBC900",
+    neonYellow: "#F0F762",
+    leafGreen: "#0F8243",
+    black: "#222",
+    grey1: "#414042",
+    grey2: "#707071",
+    grey3: "#BCBCBD",
+    grey4: "#E2E2E3",
+    grey5: "#F5F5F6",
+    white: "#FFF",
+}
+
 module.exports = {
   future: {
     defaultLineHeights: true,
@@ -20,31 +43,7 @@ module.exports = {
       sans: ["Open Sans"]
     },
     fontSize: false,
-    colors: {
-      thunder: "#323132",
-      shipGrey: "#414042",
-      abbey: "#58595B",
-      nevada: "#6D6E72",
-      aluminium: "#A6A8AB",
-      silver: "#BBBDBF",
-      iron: "#D0D2D3",
-      mercury: "#E5E5E5",
-      gallery: "#EAEAEA",
-      alabaster: "#F9F9F9",
-      haze: "#F0F1F1",
-      white: "#FFFFFF",
-      matisse: "#206095",
-      blumine: "#1A4C76",
-      salem: "#0F8243",
-      lilyWhite: "#edf4f0",
-      poppy: "#D32F2F",
-      carrot: "#FF9933",
-      astral: "#3B7A9E",
-      blue: "#3a7db4",
-      indigo: "#560072",
-      prim: "#E8DFF0",
-      pineappleYellow: "#fbc900",
-      nightBlue: "#003c57"
-    }
+    colors
   }
 }
+

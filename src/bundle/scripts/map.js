@@ -8,8 +8,8 @@ const areaChildren = window.__areaChildren__
 const areaSiblings = window.__areaSiblings__
 
 const colours = {
-  matisse: "#206095",
-  salem: "#0F8243"
+  grey3: "#414042",
+  leafGreen: "#0F8243"
 }
 
 const opacityCaseStatement = [
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
         },
         paint: {
-          "line-color": colours.salem,
+          "line-color": colours.leafGreen,
           "line-opacity": 0.5,
           "line-width": 2
         }
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         type: "fill",
         source: areaChildrenGeoJson.features.length ? "area-children" : "area",
         paint: {
-          "fill-color": colours.salem,
+          "fill-color": colours.leafGreen,
           "fill-opacity": opacityCaseStatement
         }
       },
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           visibility: "visible"
         },
         paint: {
-          "line-color": colours.salem,
+          "line-color": colours.leafGreen,
           "line-opacity": 0.2,
           "line-width": 1
         }
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             visibility: "visible"
           },
           paint: {
-            "line-color": colours.matisse,
+            "line-color": colours.grey3,
             "line-opacity": 0.2,
             "line-width": 2
           }
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           type: "fill",
           source: "area-siblings",
           paint: {
-            "fill-color": colours.matisse,
+            "fill-color": colours.grey3,
             "fill-opacity": opacityCaseStatement
           }
         },
