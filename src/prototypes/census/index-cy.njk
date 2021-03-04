@@ -1,0 +1,479 @@
+---
+lang: cy
+---
+{% extends "src/layouts/prototype-census.njk" %}
+
+{% block body %}
+<div class="page-content">
+{# C19 banner #}	
+	<section class="background--pineapple-yellow wrapper banner__bottom-shadow margin-top-sm--3 margin-top-md--3 margin-top-lg--3 margin-bottom--3 js-hover-click" style="position: relative;">
+	<div class="col-wrap">
+	<a href="/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases">
+	<div class="col">
+	<h1 class="banner__heading margin-top--1 font-weight-700 
+							font-size--h2 adjust-font-size--30">Coronavirus (COVID-19)</h1>
+	<p class="underline-link banner__link banner__body margin-top--0 margin-bottom--1">
+	Get the latest data and analysis on coronavirus (COVID-19) in the UK.
+	</p>
+	</div>
+	<span class="box__clickable"></span></a>
+	</div>
+	</section>
+{# END C19 banner #}
+	<div class="wrapper">
+	<section>
+	<header>
+		<h1 class="inline font-size--30 margin--0 padding--0">Main figures</h1>
+		<span class="hide--sm font-size--18 line-height--56"> – </span>
+		<span class="margin-left--0 line-height--56">
+		<a href="https://www.ons.gov.uk/timeseriestool" class="tile__link">From our time series explorer</a>
+		</span>
+	</header>
+	<div class="hide--sm hide--md-only">
+	<div class="flex stretch">
+	<article class="col--lg-29 tile margin-right--1">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Employment</span></h2></header>
+	<section class="inline-block col--lg-12 margin-right--1 text-align-top">
+	<div class="margin-top--1 tile__subheading">Employment rate</div>
+	<div class="margin-top-md--2 margin-top-lg--1 height-lg--11">Aged 16 to 64 seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">75.2%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-1.1pp on previous year</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for employment rate">Analysis</a>
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24/lms" class="tile__link margin-left--1" aria-label="Data for employment rate">Data</a>
+	</div>
+	</section>
+	<section class="inline-block margin-left--1 col--lg-12 text-align-top">
+	<div class="margin-top--1 tile__subheading">Unemployment rate</div>
+	<div class="margin-top-md--2 margin-top-lg--1 height-lg--11">Aged 16+ seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">5.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">1.2pp on previous year</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for unemployment rate">Analysis</a>
+	<a href="/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms" class="tile__link margin-left--1" aria-label="Data for unemployment rate">Data</a>
+	</div>
+	</section>
+	</article>
+	<article class="tile tile__content col--lg-14 margin-right--1">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Inflation</span></h2></header>
+	<div class="margin-top--1">CPIH 12-month rate</div>
+	<div class="margin-top--1">Jan 2021</div>
+	<div class="tile__figure">0.9%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">0.1pp on previous month</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest" class="tile__link" aria-label="Analysis for inflation">Analysis</a>
+	<a href="/economy/inflationandpriceindices/timeseries/l55o/mm23" class="tile__link margin-left--1" aria-label="Data for inflation">Data</a>
+	</div>
+	</article>
+	<article class="tile tile__content col--lg-14 margin-top--2">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">GDP</span></h2></header>
+	<div class="margin-top--1">Quarter on Quarter</div>
+	<div class="margin-top--1">Oct - Dec 2020</div>
+	<div class="tile__figure">1.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-15.1pp on previous quarter</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/economy/grossdomesticproductgdp/bulletins/gdpfirstquarterlyestimateuk/latest" class="tile__link" aria-label="Analysis for GDP">Analysis</a>
+	<a href="/economy/grossdomesticproductgdp/timeseries/ihyq/pn2" class="tile__link margin-left--1" aria-label="Data for GDP">Data</a>
+	</div>
+	</article>
+	</div>
+{# UK Population --> Census #}	
+	<div class="col col--lg-29 col--md-29">
+	<article class="tile tile__content margin-top-lg--2 margin-top-md--2 margin-left-md--1 margin-left-lg--0 height-lg--41" style="background-image:linear-gradient(46deg,#3c388e,#902082); color: #fff;">
+	<header class="margin-top--1"><h2 class="margin-top--2 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">
+		<!-- CY -->
+		<svg class="header__svg-logo" style="fill:#fff; display:inline-block; margin-right: 1rem;" xmlns="http://www.w3.org/2000/svg" focusable="false" width="209" height="40" viewBox="0 0 242 44" role="img" aria-labelledby="census-logo-cy-alt"><title id="census-logo-cy-alt">Cyfrifiad 2021</title><path style="opacity:0.7" d="M623.06,494.45H611.47a4.82,4.82,0,0,1,.14-1c.61-2.44,3.08-3.71,6.08-5.05,3.46-1.59,6.72-3.22,6.72-7.32s-3-6.82-8-6.82a9.6,9.6,0,0,0-6.15,2,5.11,5.11,0,0,0-2.08,3.75c0,1.9,2.4,1.87,2.4,1.76a5.42,5.42,0,0,1,5.58-4.38c2.94,0,4.67,1.41,4.67,3.78s-2.69,3.61-5.69,5.09c-3.43,1.7-7.07,3.78-7.07,8.48v.88c0,1.45.67,2,2.26,2h12.72c1.2,0,1.73-.53,1.73-1.48v-.21C624.79,495,624.26,494.45,623.06,494.45Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M595.5,474.24c-5.86,0-9.5,4.14-9.5,10.74v2.34c0,6.6,3.57,10.7,9.5,10.7s9.54-4.17,9.54-10.78V485C605,478.34,601.44,474.24,595.5,474.24Zm5.9,13.18c0,4.81-2.12,7.53-5.9,7.53s-5.83-2.76-5.83-7.56v-2.58c0-4.81,2.12-7.56,5.83-7.56s5.9,2.82,5.9,7.63Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M641.29,494.49h-3.07l0-18.3a1.49,1.49,0,0,0-1.63-1.67h-1.24L628.57,479a2,2,0,0,0,1.88,2.23,2.88,2.88,0,0,0,1.87-.78c.67-.53,1.24-1.17,2.61-2.26v16.29h-3.81c-1.1,0-1.66.46-1.66,1.48v.18c0,1,.56,1.41,1.66,1.41h10.17c1.1,0,1.67-.42,1.67-1.41V496C643,495,642.39,494.49,641.29,494.49Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M581.72,494.45H570.13a4.26,4.26,0,0,1,.15-1c.6-2.44,3.07-3.71,6.07-5.05,3.47-1.59,6.72-3.22,6.72-7.32s-3-6.82-8-6.82a9.62,9.62,0,0,0-6.15,2,5.11,5.11,0,0,0-2.08,3.75c0,1.9,2.4,1.87,2.4,1.76a5.42,5.42,0,0,1,5.58-4.38c2.94,0,4.67,1.41,4.67,3.78s-2.69,3.61-5.69,5.09c-3.43,1.7-7.07,3.78-7.07,8.48v.88c0,1.45.67,2,2.26,2h12.72c1.21,0,1.74-.53,1.74-1.48v-.21C583.46,495,582.93,494.45,581.72,494.45Z" transform="translate(-401.34 -464)"></path><path d="M556.37,464.19a2.7,2.7,0,0,0-2.7,2.69V475a11.56,11.56,0,0,0-4-.71,11.86,11.86,0,1,0,8.67,19.92,2.63,2.63,0,0,0,.72-1.72,1.41,1.41,0,0,0,0-.2V466.88A2.7,2.7,0,0,0,556.37,464.19Zm-2.7,19.11v7.92a6.38,6.38,0,0,1-4,1.41,6.47,6.47,0,1,1,0-12.94,6.36,6.36,0,0,1,4,1.41Z" transform="translate(-401.34 -464)"></path><path d="M413.19,479.61a6.41,6.41,0,0,1,4.73,2.07,2.69,2.69,0,0,0,3.94-3.67,11.86,11.86,0,1,0,0,16.14,2.69,2.69,0,0,0-3.94-3.67,6.38,6.38,0,0,1-4.73,2.07,6.47,6.47,0,1,1,0-12.94Z" transform="translate(-401.34 -464)"></path><path d="M481.59,474.26A2.69,2.69,0,0,0,478.9,477v18.21a2.69,2.69,0,1,0,5.38,0V477A2.7,2.7,0,0,0,481.59,474.26Z" transform="translate(-401.34 -464)"></path><path d="M460.12,464.11a11.89,11.89,0,0,0-8.52,11.38V495a2.7,2.7,0,0,0,5.39,0V481.65h2a2.7,2.7,0,0,0,0-5.39h-2v-.77a6.48,6.48,0,0,1,4.59-6.19l.07,0a2.69,2.69,0,0,0-1.53-5.16Z" transform="translate(-401.34 -464)"></path><path d="M531.5,474.26a2.67,2.67,0,0,0-2.13,1.05,11.86,11.86,0,1,0,0,21.45,2.7,2.7,0,0,0,4.86-1.6V477A2.7,2.7,0,0,0,531.5,474.26Zm-2.69,7.33v9.08a6.39,6.39,0,0,1-4.49,1.83,6.47,6.47,0,0,1,0-12.94,6.37,6.37,0,0,1,4.49,1.83Z" transform="translate(-401.34 -464)"></path><path d="M481.61,465.84a2.71,2.71,0,1,0,2.71,2.7A2.71,2.71,0,0,0,481.61,465.84Z" transform="translate(-401.34 -464)"></path><path d="M506.65,474.26A2.7,2.7,0,0,0,504,477v18.21a2.7,2.7,0,1,0,5.39,0V477A2.7,2.7,0,0,0,506.65,474.26Z" transform="translate(-401.34 -464)"></path><path d="M506.67,465.84a2.71,2.71,0,1,0,2.71,2.7A2.71,2.71,0,0,0,506.67,465.84Z" transform="translate(-401.34 -464)"></path><path d="M472.08,474.71a11.87,11.87,0,0,0-8.51,11.37v9a2.69,2.69,0,0,0,5.38,0v-9a6.49,6.49,0,0,1,4.6-6.19l.07,0a2.69,2.69,0,0,0-1.54-5.15Z" transform="translate(-401.34 -464)"></path><path d="M447.3,477a2.7,2.7,0,0,0-5.39,0v9c0,3.56-2,6.47-5.56,6.47s-5.56-2.91-5.56-6.47v-9a2.7,2.7,0,0,0-5.39,0v9c0,6.53,4.41,11.85,11,11.85a10.66,10.66,0,0,0,5.57-1.51v.16a6.48,6.48,0,0,1-4.6,6.19l-.06,0h0c-1.43.43-.9,1.93-.47,3.36a2.67,2.67,0,0,0,3.34,1.79c4.92-1.44,7.17-6,7.17-11.37V477Z" transform="translate(-401.34 -464)"></path><path d="M497.71,464.12a11.86,11.86,0,0,0-8.51,11.37V495a2.69,2.69,0,0,0,5.38,0V481.65h2a2.7,2.7,0,1,0,0-5.39h-2v-.77a6.48,6.48,0,0,1,4.6-6.19l.07,0a2.7,2.7,0,0,0,1.8-3.36A2.67,2.67,0,0,0,497.71,464.12Z" transform="translate(-401.34 -464)"></path></svg>
+		</span></h2>
+	</header>
+	<div class="margin-top--1">Mae cymryd rhan yn hanfodol er mwyn sicrhau eich bod chi a'ch cymuned yn cael y gwasanaethau sydd eu hangen arnoch chi.<br/><a href="" style="color: #fff; font-weight: bold;">Cwblhewch Gyfrifiad 2021.</a></div>
+	<div class="margin-top--1">
+	<p class="margin-top--0 padding-top--0">Ein paratoadau ar gyfer Cyfrifiad 2021 a thu hwnt.<br/><a href="" style="color: #fff; font-weight: bold;">Gwaith ymchwil a chynllunio ar gyfer y cyfrifiad.</a></p>
+	</div>
+	</article>
+	</div>
+{# END UK Pop --> Census #}
+	</div>
+{#  Mobile viewport #}
+	<div class="flex stretch col-wrap hide--sm hide--lg">
+	<div class="col--md-18">
+	<article class="tile margin-left--1">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Employment</span></h2></header>
+	<section class="col col--md-15 height-md--42">
+	<div class="margin-top--2 tile__subheading">Employment rate</div>
+	<div class="margin-top-md--2">Aged 16 to 64 seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">75.2%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-1.1pp on previous year</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for employment rate">Analysis</a>
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24/lms" class="tile__link margin-left--1" aria-label="Data for employment rate">Data</a>
+	</div>
+	</section>
+	<div class="col tile__split-bar print--hide width-md--14 margin-left-md--0 margin-top-md--3"></div>
+	<section class="col col--md-15 height-md--42">
+	<div class="margin-top--1 tile__subheading">Unemployment rate</div>
+	<div class="margin-top-md--2">Aged 16+ seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">5.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">1.2pp on previous year</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for unemployment rate">Analysis</a>
+	<a href="/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms" class="tile__link margin-left--1" aria-label="Data for unemployment rate">Data</a>
+	</div>
+	</section>
+	</article>
+	</div>
+	<div class="col--md-30">
+	<article class="tile tile__content col col--md-14 margin-left-md--1 margin-bottom-md--2 height-md--52">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Inflation</span></h2></header>
+	<div class="margin-top--2">CPIH 12-month rate</div>
+	<div class="margin-top--1">Jan 2021</div>
+	<div class="tile__figure">0.9%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">0.1pp on previous month</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest" class="tile__link" aria-label="Analysis for inflation">Analysis</a>
+	<a href="/economy/inflationandpriceindices/timeseries/l55o/mm23" class="tile__link margin-left--1" aria-label="Data for inflation">Data</a>
+	</div>
+	</article>
+	<article class="tile tile__content col col--md-14 margin-left-md--1 margin-bottom-md--2 height-md--52">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">GDP</span></h2></header>
+	<div class="margin-top--2">Quarter on Quarter</div>
+	<div class="margin-top--1">Oct - Dec 2020</div>
+	<div class="tile__figure">1.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-15.1pp on previous quarter</span>
+	</p>
+	<div class="margin-top--2">
+	<a href="/economy/grossdomesticproductgdp/bulletins/gdpfirstquarterlyestimateuk/latest" class="tile__link" aria-label="Analysis for GDP">Analysis</a>
+	<a href="/economy/grossdomesticproductgdp/timeseries/ihyq/pn2" class="tile__link margin-left--1" aria-label="Data for GDP">Data</a>
+	</div>
+	</article>
+	<article class="tile tile__content margin-top-md--6 margin-left-md--1 height-md--43">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--4 margin-left--0"><span class="tile__title">UK population</span></h2></header>
+	<div class="margin-top--2">Mid-year estimate (2019)</div>
+	<div class="tile__figure">66,796,800</div>
+	<div class="margin-top--2">
+	<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/latest" class="tile__link" aria-label="Analysis for UK population">Analysis</a>
+	<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/ukpop/pop" class="tile__link margin-left--1" aria-label="Data for UK population">Data</a>
+	</div>
+	</article>
+	</div>
+	</div>
+	<div class="hide--md hide--lg">
+	<article class="tile tile__content col">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">GDP</span></h2></header>
+	<div class="">Quarter on Quarter</div>
+	<div class="margin-top--1">Oct - Dec 2020</div>
+	<div class="tile__figure">1.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-15.1pp on previous quarter</span>
+	</p>
+	
+	<div class="margin-top--1">
+	<a href="/economy/grossdomesticproductgdp/bulletins/gdpfirstquarterlyestimateuk/latest" class="tile__link" aria-label="Analysis for GDP">Analysis</a>
+	<a href="/economy/grossdomesticproductgdp/timeseries/ihyq/pn2" class="tile__link margin-left--1" aria-label="Data for GDP">Data</a>
+	</div>
+	</article>
+	<article class="tile tile__content col margin-right--1">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Inflation</span></h2></header>
+	<div class="">CPIH 12-month rate</div>
+	<div class="margin-top--1">Jan 2021</div>
+	<div class="tile__figure">0.9%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">0.1pp on previous month</span>
+	</p>
+	<div class="margin-top--1">
+	<a href="/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest" class="tile__link" aria-label="Analysis for inflation">Analysis</a>
+	<a href="/economy/inflationandpriceindices/timeseries/l55o/mm23" class="tile__link margin-left--1" aria-label="Data for inflation">Data</a>
+	</div>
+	</article>
+	<button class="col btn btn--full-width btn--primary btn--focus tile__button hide--md hide--lg js-main-feature-expand-button" type="button">Show more ...
+	</button>
+{# Hidden tiles #}
+	<div class="js-main-expanded hidden">
+	<article class="tile tile__content col">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">UK population</span></h2></header>
+	<div class="">Mid-year estimate (2019)</div>
+	<div class="tile__figure">66,796,800</div>
+	<div class="margin-top--1">
+	<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/latest" class="tile__link" aria-label="Analysis for UK population">Analysis</a>
+	<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/ukpop/pop" class="tile__link margin-left--1" aria-label="Data for UK population">Data</a>
+	</div>
+	</article>
+	<article class="col tile margin-right--1">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Employment</span></h2></header>
+	<section class="col">
+	<div class="margin-top--1 tile__subheading"><b>Employment rate</b></div>
+	<div class="">Aged 16 to 64 seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">75.2%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↓
+	</span>
+	<span class="tile__trend__text">-1.1pp on previous year</span>
+	</p>
+	<div class="margin-top--1">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for employment rate">Analysis</a>
+	 <a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24/lms" class="tile__link margin-left--1" aria-label="Data for employment rate">Data</a>
+	</div>
+	</section>
+	<div class="col tile__split-bar"></div>
+	<div class="col">
+	<div class="margin-top--1 tile__subheading"><b>Unemployment rate</b></div>
+	<div class="">Aged 16+ seasonally adjusted (Sep - Nov 2020)</div>
+	<div class="tile__figure">5.0%</div>
+	<p class="tile__trend">
+	<span class="tile__trend__icon">
+	↑
+	</span>
+	<span class="tile__trend__text">1.2pp on previous year</span>
+	</p>
+	<div class="margin-top--1">
+	<a href="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/latest" class="tile__link" aria-label="Analysis for unemployment rate">Analysis</a>
+	<a href="/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms" class="tile__link margin-left--1" aria-label="Data for unemployment rate">Data</a>
+	</div>
+	</div>
+	</article>
+	</div>
+{# END Hidden on Mobile #}	
+	</div>
+	<button class="col btn btn--full-width btn--primary btn--focus tile__button hide--md hide--lg js-main-feature-compress-button hidden" type="button">Show fewer ...
+	</button>
+	</section>
+	<div>
+	{# <article class="tile tile__content col col--lg-29 margin-top-lg--2 margin-top-md--2 margin-left-lg--1 height-lg--31">
+	<header class="margin-top--1">
+	<h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0">
+	<span class="tile__title">Latest releases</span>
+	</h2>
+	</header>
+	<div class="tile__content-container--space-between">
+	<p class="tile__content tile__text-description margin-top--0 margin-bottom--0 font-size--18">
+	All of our publications are listed in our release calendar. We have published
+	18 statistical releases in the last 7 days.
+	</p>
+	<p class="margin-top--0 margin-bottom--0 padding-bottom--0">
+	<a class="tile__link" href="/releasecalendar">View all of our releases by date</a>
+	</p>
+	</div>
+	</article> #}
+{# New position Population desktop #}	
+		<article class="tile tile__content col col--lg-29 margin-top-lg--2 margin-top-md--2 margin-left-lg--1 height-lg--41 hide--sm">
+		<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">UK population</span></h2></header>
+		<div class="margin-top--1">Mid-year estimate (2019)</div>
+		<div class="tile__figure">66,796,800</div>
+		<div class="margin-top--2">
+		<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/latest" class="tile__link" aria-label="Analysis for UK population">Analysis</a>
+		<a href="/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/ukpop/pop" class="tile__link margin-left--1" aria-label="Data for UK population">Data</a>
+		</div>
+		</article>
+	
+	</div>
+	</div>
+	<div class="flex wrapper flex-wrap-wrap stretch tiles background-gallery margin-top--2 margin-bottom--2 flex-basis-sm--full">
+	<article class="promo__container tile tile__content margin-top-lg--0 margin-top-md--2 height-lg--31 hide--lg hide--md margin-bottom--2" style="background-image:linear-gradient(46deg,#3c388e,#902082); color: #fff;">
+		<header class="margin-top--1"><h2 class="margin-top--2 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">
+			<svg class="header__svg-logo" style="fill:#fff; display:inline-block; margin-right: 1rem;" xmlns="http://www.w3.org/2000/svg" focusable="false" width="209" height="40" viewBox="0 0 242 44" role="img" aria-labelledby="census-logo-cy-alt"><title id="census-logo-cy-alt">Cyfrifiad 2021</title><path style="opacity:0.7" d="M623.06,494.45H611.47a4.82,4.82,0,0,1,.14-1c.61-2.44,3.08-3.71,6.08-5.05,3.46-1.59,6.72-3.22,6.72-7.32s-3-6.82-8-6.82a9.6,9.6,0,0,0-6.15,2,5.11,5.11,0,0,0-2.08,3.75c0,1.9,2.4,1.87,2.4,1.76a5.42,5.42,0,0,1,5.58-4.38c2.94,0,4.67,1.41,4.67,3.78s-2.69,3.61-5.69,5.09c-3.43,1.7-7.07,3.78-7.07,8.48v.88c0,1.45.67,2,2.26,2h12.72c1.2,0,1.73-.53,1.73-1.48v-.21C624.79,495,624.26,494.45,623.06,494.45Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M595.5,474.24c-5.86,0-9.5,4.14-9.5,10.74v2.34c0,6.6,3.57,10.7,9.5,10.7s9.54-4.17,9.54-10.78V485C605,478.34,601.44,474.24,595.5,474.24Zm5.9,13.18c0,4.81-2.12,7.53-5.9,7.53s-5.83-2.76-5.83-7.56v-2.58c0-4.81,2.12-7.56,5.83-7.56s5.9,2.82,5.9,7.63Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M641.29,494.49h-3.07l0-18.3a1.49,1.49,0,0,0-1.63-1.67h-1.24L628.57,479a2,2,0,0,0,1.88,2.23,2.88,2.88,0,0,0,1.87-.78c.67-.53,1.24-1.17,2.61-2.26v16.29h-3.81c-1.1,0-1.66.46-1.66,1.48v.18c0,1,.56,1.41,1.66,1.41h10.17c1.1,0,1.67-.42,1.67-1.41V496C643,495,642.39,494.49,641.29,494.49Z" transform="translate(-401.34 -464)"></path><path style="opacity:0.7" d="M581.72,494.45H570.13a4.26,4.26,0,0,1,.15-1c.6-2.44,3.07-3.71,6.07-5.05,3.47-1.59,6.72-3.22,6.72-7.32s-3-6.82-8-6.82a9.62,9.62,0,0,0-6.15,2,5.11,5.11,0,0,0-2.08,3.75c0,1.9,2.4,1.87,2.4,1.76a5.42,5.42,0,0,1,5.58-4.38c2.94,0,4.67,1.41,4.67,3.78s-2.69,3.61-5.69,5.09c-3.43,1.7-7.07,3.78-7.07,8.48v.88c0,1.45.67,2,2.26,2h12.72c1.21,0,1.74-.53,1.74-1.48v-.21C583.46,495,582.93,494.45,581.72,494.45Z" transform="translate(-401.34 -464)"></path><path d="M556.37,464.19a2.7,2.7,0,0,0-2.7,2.69V475a11.56,11.56,0,0,0-4-.71,11.86,11.86,0,1,0,8.67,19.92,2.63,2.63,0,0,0,.72-1.72,1.41,1.41,0,0,0,0-.2V466.88A2.7,2.7,0,0,0,556.37,464.19Zm-2.7,19.11v7.92a6.38,6.38,0,0,1-4,1.41,6.47,6.47,0,1,1,0-12.94,6.36,6.36,0,0,1,4,1.41Z" transform="translate(-401.34 -464)"></path><path d="M413.19,479.61a6.41,6.41,0,0,1,4.73,2.07,2.69,2.69,0,0,0,3.94-3.67,11.86,11.86,0,1,0,0,16.14,2.69,2.69,0,0,0-3.94-3.67,6.38,6.38,0,0,1-4.73,2.07,6.47,6.47,0,1,1,0-12.94Z" transform="translate(-401.34 -464)"></path><path d="M481.59,474.26A2.69,2.69,0,0,0,478.9,477v18.21a2.69,2.69,0,1,0,5.38,0V477A2.7,2.7,0,0,0,481.59,474.26Z" transform="translate(-401.34 -464)"></path><path d="M460.12,464.11a11.89,11.89,0,0,0-8.52,11.38V495a2.7,2.7,0,0,0,5.39,0V481.65h2a2.7,2.7,0,0,0,0-5.39h-2v-.77a6.48,6.48,0,0,1,4.59-6.19l.07,0a2.69,2.69,0,0,0-1.53-5.16Z" transform="translate(-401.34 -464)"></path><path d="M531.5,474.26a2.67,2.67,0,0,0-2.13,1.05,11.86,11.86,0,1,0,0,21.45,2.7,2.7,0,0,0,4.86-1.6V477A2.7,2.7,0,0,0,531.5,474.26Zm-2.69,7.33v9.08a6.39,6.39,0,0,1-4.49,1.83,6.47,6.47,0,0,1,0-12.94,6.37,6.37,0,0,1,4.49,1.83Z" transform="translate(-401.34 -464)"></path><path d="M481.61,465.84a2.71,2.71,0,1,0,2.71,2.7A2.71,2.71,0,0,0,481.61,465.84Z" transform="translate(-401.34 -464)"></path><path d="M506.65,474.26A2.7,2.7,0,0,0,504,477v18.21a2.7,2.7,0,1,0,5.39,0V477A2.7,2.7,0,0,0,506.65,474.26Z" transform="translate(-401.34 -464)"></path><path d="M506.67,465.84a2.71,2.71,0,1,0,2.71,2.7A2.71,2.71,0,0,0,506.67,465.84Z" transform="translate(-401.34 -464)"></path><path d="M472.08,474.71a11.87,11.87,0,0,0-8.51,11.37v9a2.69,2.69,0,0,0,5.38,0v-9a6.49,6.49,0,0,1,4.6-6.19l.07,0a2.69,2.69,0,0,0-1.54-5.15Z" transform="translate(-401.34 -464)"></path><path d="M447.3,477a2.7,2.7,0,0,0-5.39,0v9c0,3.56-2,6.47-5.56,6.47s-5.56-2.91-5.56-6.47v-9a2.7,2.7,0,0,0-5.39,0v9c0,6.53,4.41,11.85,11,11.85a10.66,10.66,0,0,0,5.57-1.51v.16a6.48,6.48,0,0,1-4.6,6.19l-.06,0h0c-1.43.43-.9,1.93-.47,3.36a2.67,2.67,0,0,0,3.34,1.79c4.92-1.44,7.17-6,7.17-11.37V477Z" transform="translate(-401.34 -464)"></path><path d="M497.71,464.12a11.86,11.86,0,0,0-8.51,11.37V495a2.69,2.69,0,0,0,5.38,0V481.65h2a2.7,2.7,0,1,0,0-5.39h-2v-.77a6.48,6.48,0,0,1,4.6-6.19l.07,0a2.7,2.7,0,0,0,1.8-3.36A2.67,2.67,0,0,0,497.71,464.12Z" transform="translate(-401.34 -464)"></path></svg>
+			</span></h2>
+		</header>
+		<div class="margin-top--1">Mae cymryd rhan yn hanfodol er mwyn sicrhau eich bod chi a'ch cymuned yn cael y gwasanaethau sydd eu hangen arnoch chi.<br/><a href="" style="color: #fff; font-weight: bold;">Cwblhewch Gyfrifiad 2021.</a></div>
+		<div class="margin-top--1">
+		<p class="margin-top--0 padding-top--0">Ein paratoadau ar gyfer Cyfrifiad 2021 a thu hwnt.<br/><a href="" style="color: #fff; font-weight: bold;">Gwaith ymchwil a chynllunio ar gyfer y cyfrifiad.</a></p>
+		</div>
+		</article>
+	<div class="col--md-23 col--lg-29 margin-right-md--1 margin-bottom-sm--2 flex-basis-sm--full">
+	<a class="promo__container" href="/surveys">
+	<section class="promo__background--blue-gradient box__content box__content--homepage">
+	<div class="promo__body padding-left--1 padding-right--1 padding-top--2 padding-bottom--2">
+	<img class="hide--md-only" src="https://cdn.ons.gov.uk/assets/images/icon-checkbox.svg" alt="">
+	<div class="promo__copy">
+	<h2 class="promo__heading margin-top--0 padding-top--0 padding-bottom-sm--0 padding-bottom-md--0 padding-bottom-lg--1">Taking part in a survey?</h2>
+	<p class="promo__description margin-top--0 margin-bottom--0 padding-bottom--0 underline-link">It's never been more important.</p>
+	</div>
+	</div>
+	</section>
+	</a>
+	</div>
+	<div class="col--md-23 col--lg-29 flex-basis-sm--full">
+	<article class="tile tile__content margin--0">
+	<header class="margin-top--1"><h2 class="margin-top--0 margin-right--0 margin-bottom--0 margin-left--0"><span class="tile__title">Latest releases</span></h2></header>
+	<div class="padding-bottom--1"><a href="/releasecalendar">View all of our releases by date</a></div>
+	</article>
+	{# <a class="promo__container" href="/census">
+	<section class="promo__background--plum-gradient box__content box__content--homepage">
+	<div class="promo__copy promo__body--column padding-left--1 padding-right--1 padding-top--2 padding-bottom--2">
+	<img class="padding-top--1 padding-bottom-md--1" alt="Census 2021" src="https://cdn.ons.gov.uk/assets/images/census-logo/logo-census-2021-white-landscape.svg">
+	<p class="padding-top-lg--0 padding-top-sm--2 padding-top-md--3 promo__description margin-top--0 margin-bottom--0 padding-right--1 underline-link">
+	Discover how our census statistics help paint a picture of the nation and how we live.
+	</p>
+	</div>
+	</section>
+	</a> #}
+	</div>
+	</div>
+	<div class="wrapper background-gallery">
+	<div class="tiles">
+	<div class="tiles__block tiles__block-no-mar-bottom">
+	<section>
+	<h1 class="font-size--h2 font-size--30 margin-top--1">In focus</h1>
+	<div class="margin--0 flex stretch flex-wrap-wrap margin-bottom--3 content-space-between content-lg--flex-start">
+	<section class="tile col--md-23 col--lg-14 flex-basis-sm--full margin-right-lg--1" tabindex="0">
+	<article class="tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://static.ons.gov.uk/visual/2020/in-focus/weekly-death-statistics@2x.png" alt="">
+	</div>
+	<h2 class="margin-top--0 margin-bottom--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales">
+	Weekly deaths
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0 margin-bottom--0">The most up-to-date provisional figures for deaths involving the coronavirus (COVID-19) in England and Wales.</p>
+	</article>
+	</section>
+	<section class="tile col--md-23 col--lg-14 flex-basis-sm--full margin-right-lg--1" tabindex="0">
+	<article class="tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://static.ons.gov.uk/visual/2020/in-focus/covid-dashboard@2x.png" alt="">
+	</div>
+	<h2 class="margin-top--0 margin-bottom--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/articles/coronaviruscovid19/latestinsights">
+	Coronavirus latest insights
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0 margin-bottom--0">Explore the latest trends and data about the coronavirus from the ONS and other sources.</p>
+	</article>
+	</section>
+	<section class="tile col--md-23 col--lg-14 flex-basis-sm--full margin-right-lg--1" tabindex="0">
+	<article class="tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://static.ons.gov.uk/visual/2021/in-focus/covid-infection-survey@2x.png" alt="">
+	</div>
+	<h2 class="margin-top--0 margin-bottom--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/surveys/informationforhouseholdsandindividuals/householdandindividualsurveys/covid19infectionsurvey">
+	COVID-19 Infection Survey
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0 margin-bottom--0">Find out more if you have been contacted to take part.</p>
+	</article>
+	</section>
+	<section class="tile col--md-23 col--lg-14 flex-basis-sm--full " tabindex="0">
+	<article class="tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://static.ons.gov.uk/visual/2021/in-focus/covid-econ-roundup@2x.png" alt="">
+	</div>
+	<h2 class="margin-top--0 margin-bottom--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/economy/economicoutputandproductivity/output/articles/ukeconomylatest/2021-01-25">
+	Economic roundup
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0 margin-bottom--0"> Catch up on the latest economic data and analysis. </p>
+	</article>
+	</section>
+	</div>
+	</section>
+	</div>
+	<div class="tiles__block tiles__block-no-mar-bottom">
+	<section>
+	<h1 class="margin-top--0 font-size--h2 font-size--30">Around the ONS</h1>
+	<div class="margin--0 flex stretch flex-wrap-wrap margin-bottom--3 content-space-between content-lg--flex-start">
+	<section class="col--md-23 col--lg-14 margin-top--2 flex-basis-sm--full margin-right-lg--1">
+	<article tabindex="0" class="tile tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://cdn.ons.gov.uk/assets/images/around-the-ons/local-statistics.png" alt="">
+	</div>
+	<h2 class="margin-bottom--0 margin-top--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/help/localstatistics">
+	Local statistics
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0">Where to find statistics covering specific areas.</p>
+	</article>
+	</section>
+	<section class="col--md-23 col--lg-14 margin-top--2 flex-basis-sm--full margin-right-lg--1">
+	<article tabindex="0" class="tile tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://cdn.ons.gov.uk/assets/images/around-the-ons/data-strategy.png" alt="">
+	</div>
+	<h2 class="margin-bottom--0 margin-top--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/aboutus/whatwedo/statistics/requestingstatistics/approvedresearcherscheme">
+	Secure Research Service
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0">Find out how ONS secure data could help your research project.</p>
+	</article>
+	</section>
+	<section class="col--md-23 col--lg-14 margin-top--2 flex-basis-sm--full margin-right-lg--1">
+	<article tabindex="0" class="tile tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://cdn.ons.gov.uk/assets/images/around-the-ons/ons-centres.png" alt="">
+	</div>
+	<h2 class="margin-bottom--0 margin-top--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.ons.gov.uk/aboutus/whatwedo/programmesandprojects/onscentres">
+	ONS Centres
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0">Producing new analysis and insights to support key policy areas.</p>
+	</article>
+	</section>
+	<section class="col--md-23 col--lg-14 margin-top--2 flex-basis-sm--full">
+	<article tabindex="0" class="tile tile__highlighted-content">
+	<div class="tile__highlighted-content-image-container">
+	<img class="tile__highlighted-content-image" src="https://cdn.ons.gov.uk/assets/images/around-the-ons/other-govt-statistics.png" alt="">
+	</div>
+	<h2 class="margin-bottom--0 margin-top--0">
+	<a class="margin-left--0 tile__link tile__link--highlighted-content-title font-size--24" href="https://www.gov.uk/government/statistics">
+	Other government statistics
+	</a>
+	</h2>
+	<p class="tile__text-description margin-top--0">Official Statistics available from across government.</p>
+	</article>
+	</section>
+	</div>
+	</section>
+	</div>
+	</div>
+	</div>
+	</div>
+{% endblock body %}
