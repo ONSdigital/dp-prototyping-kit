@@ -1,0 +1,72 @@
+{% extends "src/layouts/prototype.njk" %}
+{% block head %}
+<!-- Blockquote styling -->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+.quote {
+	border-left: 0.3rem solid #e2e2e3;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
+}
+.quote-body,
+.quote-body > * {
+	font-size: 1.45rem;
+	font-weight: 600;
+	line-height: 36px;
+}
+.quote-body p:first-of-type::before {
+	content: open-quote;
+	display: inline;
+	margin-left: -.75ch;
+}
+.quote-body p:last-of-type::after {
+	content: close-quote;
+}
+.quote-body {
+	quotes: "“" "”" "‘" "’";
+}
+.quote::first-line {
+	//text-indent: -0.75ch; // not supported in all browsers
+}
+.quote figcaption {
+	//display: block;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 28px;
+	margin-top: 0.5rem;
+}
+</style>
+<!-- /Blockquote styling -->
+{% endblock head%}
+{% block body %}
+		<div class="wrapper">
+			<div class="col-wrap border-bottom--iron-md">
+				<div class="col col--md-31 col--lg-41 margin-left-md--1">
+				<article class="col col--md-36 col--lg-39 page-content__main-content padding-bottom">
+				<div class="section__content--markdown"><section><header><h2><span class="section__content-number">1.</span> Main points</h2></header></section></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam metus, pretium eget molestie eget, mattis facilisis ante. Aenean ultrices efficitur ipsum eget efficitur. Donec eget libero blandit, pellentesque quam a, tincidunt diam. Vestibulum facilisis vitae massa non congue. Proin tincidunt sit amet quam ut hendrerit. Duis varius viverra metus eu faucibus. In mauris sapien, consectetur quis enim sit amet, vulputate ornare turpis. In dictum dui arcu, et semper leo aliquet sed. Nunc sit amet tortor vel arcu mollis sodales vel ac dui.</p>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam luctus, dolor at luctus aliquam, dui lacus tempor metus, nec interdum leo quam at ligula. Nullam eu hendrerit lacus. Ut pellentesque cursus nisl, ut sollicitudin quam venenatis eget. Pellentesque ut ante est. Quisque vitae rutrum ligula, id varius nibh. Etiam pulvinar elit nisl, at iaculis lorem vehicula eu.</p>
+				<p>Donec at diam sed est semper commodo at in dolor. Quisque luctus ipsum arcu, fringilla rhoncus felis rhoncus at. Nulla feugiat accumsan mi, sit amet mollis arcu rutrum eget. Phasellus tristique ipsum neque, nec fringilla purus iaculis ac. Ut ultricies dolor sem, vel lacinia turpis luctus in. Curabitur interdum ante ut viverra fermentum. Nunc urna nisi, vestibulum ut elit ut, ultrices dignissim est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam blandit lacus felis, id commodo mi mollis a.</p>
+				<figure class="quote">
+					<blockquote class="quote-body">
+						<p>[I’m shopping] once every couple of days… it just gives me something to do. We don’t really need anything, but we go to do something.</p>
+					</blockquote>
+					<figcaption class="quote-source">Male, 18-24 years, LIW, Wales</figcaption>
+				</figure>
+				<p>Cras ut tortor blandit, tempor ipsum id, efficitur tellus. Duis luctus, arcu dictum tincidunt lobortis, orci mauris faucibus lectus, sit amet aliquam dui sem id arcu. Cras id maximus lorem. Morbi sed blandit augue. Aenean placerat id lacus sed laoreet. Donec dapibus elementum est quis vehicula. Integer venenatis lobortis massa at laoreet. Etiam fermentum lacus quis urna accumsan, id luctus libero blandit. Sed tincidunt, risus id facilisis iaculis, tellus justo semper eros, fringilla luctus sapien orci et massa. Vestibulum blandit risus et sapien ultricies, et efficitur lacus ultricies. Nunc facilisis magna metus, a mattis dolor feugiat in. Sed tristique mauris ut placerat facilisis. Quisque eu erat eu quam fringilla porta et ut lorem.</p>
+				<p>Phasellus nec sapien nec orci dignissim accumsan. Fusce non posuere arcu, quis dignissim enim. Pellentesque ex metus, lobortis sit amet eros blandit, accumsan convallis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis accumsan tempus dui ut dictum. Vivamus feugiat augue sed porta sodales. Donec luctus maximus massa mattis rhoncus.</p>
+				<figure class="quote">
+					<blockquote class="quote-body">
+						<p>Phasellus nec sapien nec orci dignissim accumsan. Fusce non posuere arcu, quis dignissim enim. Pellentesque ex metus, lobortis sit amet eros blandit, accumsan convallis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					</blockquote>
+					<figcaption class="quote-source">Male, 18-24 years, LIW, Wales</figcaption>
+				</figure>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor iaculis justo a iaculis. Proin non diam sit amet lorem posuere aliquam vitae vitae mi. Etiam et turpis egestas, rhoncus dolor sit amet, viverra orci. Sed dictum libero libero, eget fermentum enim scelerisque ut. Nam convallis urna ex, sodales efficitur mi porttitor sit amet. Nullam eget tellus faucibus, tincidunt velit a, condimentum tortor. Mauris sodales, enim condimentum lacinia tempor, neque erat elementum ex, nec sodales nunc massa sed risus. Proin rhoncus ut orci ut aliquam. Vestibulum justo mauris, consectetur nec mi at, venenatis interdum urna. Proin turpis nibh, lacinia vel massa at, interdum mollis purus. Proin blandit orci nisl, in iaculis risus luctus sed. Vivamus tempor sem sed mi elementum, vitae semper urna consectetur.</p>
+				<p>Aliquam pretium leo eget venenatis vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam magna nisi, fringilla in leo ut, facilisis dignissim enim. Sed quis euismod ante. Donec et posuere enim, placerat pharetra tortor. Aliquam fermentum, erat in lobortis accumsan, eros lorem sagittis purus, eu pharetra arcu risus at sem. Vivamus vel leo purus.</p>
+				</article>
+				</div>
+			</div>
+		</div>
+{% endblock body %}
