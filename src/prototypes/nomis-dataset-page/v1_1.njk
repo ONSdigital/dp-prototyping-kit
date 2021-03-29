@@ -1,0 +1,89 @@
+{% extends "src/layouts/prototype.njk" %}
+{%- block head -%}
+<style>.meta__item:last-of-type {border: none;} .btn:hover {color: white; text-decoration: underline}</style>
+{%- endblock -%}
+
+{% block body %}
+    <div class="wrapper mb-8">
+        {%- include "breadcrumbs.njk" -%}
+        <header class="mb-2">
+        <h1 class="text-2xl">
+          <span class="pt-0 pb-0 text-md">Census dataset:</span><br/>
+          <strong class="p-0">{{nomisapi.title}}</strong>
+        </h1>
+            {# <h1 class="mb-1 p-0 text-3xl font-bold">NOMIS Dataset thing</h1> #}
+        </header>
+    </div>
+    <div class="meta-wrap meta-wrap--thin p-0 m-0" style="background: transparent; border-top: none;">
+      <div class="wrapper">
+      <dl class="col-wrap">
+      <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
+        <dt class="meta__term inline text-base">Release date:</dt>
+        <dd class="inline text-base">{{nomisapi.release_date}}</dd>
+      </div>
+      <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
+        <dt class="meta__term inline text-base">Release frequency:</dt>
+        <dd class="inline text-base">{{nomisapi.release_frequency}}</dd>
+      </div>
+      <div class="col col--md-16 col--lg-20 padding-left-sm--0 meta__item">
+        <dt class="meta__term inline text-base">Next release:</dt>
+        <dd class="inline text-base">{{nomisapi.next_release}}</dd>
+      </div>
+      </dl>
+      </div>
+    </div>
+  <div class="wrapper mb-8 mt-4">
+    <div class="col-wrap">
+    <div class="col col--lg-two-thirds col--md-two-thirds">
+      <section class="dataset-description mb-4">
+        <p class="text-base">{{nomisapi.description}}</p>
+      </section>
+      <section class="mb-4 text-base">
+        <h2 class="font-bold text-md">Get the data</h2>
+        <a href="https://www.nomisweb.co.uk/census/2011/ks106ew" class="btn btn--primary btn--thick font-bold mb-8 mt-4 text-base" role="button" rel="external">Access this data on NOMIS <span class="icon icon-external--light-small"></span></a>
+        {# <p>This dataset is provided on NOMIS<a href="#nomis"><sup><span class="visuallyhidden">Information about Nomis</span>[1]</sup></a>.</p> #}
+        <p>Use the Nomis service to view, sort and analyse official UK labour market statistics such as employment, unemployment, earnings and the Annual Population Survey.</p>
+        <p>You can also find, view and sort by area, data from the <a href="https://www.nomisweb.co.uk/">2011 Census on Nomis</a>.</p>
+        <p>It is a service run by the University of Durham for the Office for National Statistics.</p>
+        {# Keywords from NOMIS API #}
+        {%- if nomisapi.keywords -%}
+        <h3 class="font-bold text-md mb-2 mt-4">Keywords</h3>
+        <ul class="nav-secondary__list mb-8">
+        {%- for k in nomisapi.keywords -%}
+          <li class="nav-secondary__item mb-2 mt-2 p-0"><a href="https://www.ons.gov.uk/search?q=census+2011+{{k}}">{{k}}</a></li>
+        {%- endfor -%}
+        </ul>
+          {%-else-%}
+        {%-endif-%}
+        {# END keywords #}        
+      </section>
+      {%-if nomisapi.usage_notes -%}<section class="mb-4">
+        <h3 class="font-bold text-md mb-2">{{nomisapi.usage_notes.title}}</h3>
+        {{nomisapi.usage_notes.note | safe}}
+      </section>{%else%}{%-endif-%}
+    </div>
+    <!-- Contact col -->
+    <div class="col col--lg-one-third col--md-one-third margin-bottom">
+      <div class="tiles__item tiles__item--nav-type margin-left--0 margin-right--0">
+      <h3 class="text-md p-4">Contact details for this dataset</h3>
+      <div class="tiles__content tiles__content--nav p-4">
+      <address>
+        <span class="contact-name block text-base mb-2">{{nomisapi.contacts.name}}</span>
+        <span class="contact-email block text-base mb-2"><a href="mailto:{{nomisapi.contacts.email}}?subject=KS106EW">{{nomisapi.contacts.email}}</a></span>
+        <span class="contact-phone block text-base mb-2" style="font-variant-numeric: tabular-nums;">{{nomisapi.contacts.telephone}}</span>
+      </address>
+      </div>
+      </div>
+      {# <div class="tiles__item tiles__item--nav-type margin-left--0 margin-right--0">
+        <h3 class="tiles__title-h3 tiles__title-h3--nav text-md">Related datasets</h3>
+          <div class="tiles__content tiles__content--nav">
+            <ul class="list--neutral">
+              <li><a href="https://www.ons.gov.uk/census" class="text-base">Census 2021</a></li>
+            </ul>
+          </div>
+      </div> #}
+      </div>
+    <!-- END Contact col -->
+    </div>
+  </div>
+{% endblock body %}
