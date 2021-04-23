@@ -29,7 +29,7 @@ module.exports = {
     standardFontWeights: true
   },
   purge: {
-    content: ["./src/**/*.njk", "./src/**/*.js", "./src/**/*.svg"]
+    content: ["./src/**/*.njk", "./src/**/*.js", "./src/**/*.svg", "./src/**/*.svelte"], 
   },
   plugins: [require("tailwindcss-debug-screens")],
   theme: {
