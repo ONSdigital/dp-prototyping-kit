@@ -1,0 +1,34 @@
+{% extends "src/layouts/prototype.njk" %}
+
+{% block body %}
+    <div class="wrapper mb-8">
+        {% include "breadcrumbs.njk" %}
+
+        <section class="mb-8">
+            <h1 class="mb-1 p-0 text-3xl font-bold">{{title}}</h1>
+        </section>
+
+        <div class="mb-16" id="areas">
+            {% if a11yreport %}
+            <div class="border-2 border-grey4 p-4 mt-4 mb-4"><h2 class="text-md font-bold mb-2">A11y audit</h2>
+              <dl>
+              {%- for issue in a11yreport -%}
+                  <dt class="font-bold">{%-if issue.type === "error" -%}🚨{%-elseif issue.type==="warning"-%}⚠️{%-endif-%}&nbsp;{{issue.type}}</dt>
+                  <dd class="mb-2">{{issue.issue}}<br />
+                      <span class="text-sm">[WCAG&nbsp;{{issue.wcag}}]&nbsp;{{issue.auditor}}</span>
+                  </dd>
+              {%endfor%}
+              </dl>
+            </div>
+            {% endif %}
+            <ul>
+                <li><a href="../">Modal</a></li>
+                <li><a href="../weblink">Weblink</a></li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum nec quam eu tincidunt. Etiam rutrum magna justo, ut viverra ipsum porta et. In leo velit, efficitur id arcu sed, tincidunt pretium justo. Praesent vel tortor in mi scelerisque egestas. Integer quis magna est. Integer aliquam sit amet eros eget eleifend. Morbi in ullamcorper diam. Suspendisse aliquam facilisis egestas.</p>
+            
+            <p>Cras nec mauris felis. Quisque tincidunt mi eget felis euismod, sit amet varius massa imperdiet. Phasellus a ex rhoncus, iaculis nulla sit amet, commodo est. Nulla vitae aliquet lorem. Vestibulum vitae consectetur dui, quis fringilla metus. Donec consectetur mi non rutrum ornare. Ut lectus lectus, blandit ac fringilla quis, sagittis a sem. Sed sed volutpat nibh. Maecenas tempor et mauris ut pulvinar. Duis quis laoreet eros. Quisque tempor est eu enim semper consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam iaculis ultricies dui ut hendrerit. Fusce in mauris at leo tempor facilisis eu eu quam.</p>
+            <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd46SduUZpYUxcQeMqqpNylDsiA7yxy0w6v7nxLgse1XE.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script><a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=www.surveymonkey.com> Create your own user feedback survey </a>
+        </div>
+    </div> 
+{% endblock body %}
