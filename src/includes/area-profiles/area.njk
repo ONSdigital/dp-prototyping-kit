@@ -24,7 +24,12 @@
         </div>
         <div class="col-span-2 mb-6" id="summary">
             <h2 class="text-md font-bold mb-2">Summary</h2>
-            <p>Find Census 2021 data about the {{area.type | replace("Electoral ", "")}} of {{area.name}}. Topics include population, households, housing, economic activity, education and health.</p>
+            {% if area.type === "Country" %}
+                {% set areaType = area.name %}
+            {% else %}
+                {% set areaType = "the " + area.type | lower + " of " + area.name %}
+            {% endif %}
+            <p>Find Census 2021 data about {{areaType}}. Topics include population, households, housing, economic activity, education and health.</p>
         </div>
     </div>
 </div>
@@ -32,7 +37,7 @@
 <section id="key-stats">
     <div class="wrapper">
         <header>
-            <h2 class="text-md font-bold mb-4">Key statistics</h2>
+            <h2 class="text-md font-bold mb-4">Main statistics</h2>
         </header>
         <div class="mb-8">
             <ul class="list-none divide-y divide-grey3 md:flex md:divide-y-0 md:divide-x md:-ml-4">

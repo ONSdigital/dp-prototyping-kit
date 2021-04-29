@@ -2,14 +2,14 @@ const R = require("ramda")
 const censusData = require("./data/census-data")
 
 const areaTypes = {
-  W05: "Electoral Wards",
-  E05: "Electoral Wards",
-  E06: "Local Authorities",
-  W06: "Local Authorities",
-  E09: "Local Authorities",
-  E08: "Local Authorities",
-  E10: "Local Authorities",
-  E07: "Local Authority Districts",
+  W05: "Electoral wards",
+  E05: "Electoral wards",
+  E06: "Local authorities",
+  W06: "Local authorities",
+  E09: "Local authorities",
+  E08: "Local authorities",
+  E10: "Local authorities",
+  E07: "Local authority districts",
   E12: "Regions"
 }
 
