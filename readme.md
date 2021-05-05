@@ -18,8 +18,9 @@ This prototyping kit is based on [11ty](https://www.11ty.dev/), a nodejs based s
 
 - the Area Profiles prototypes contain a large amount of data and will build thousands of pages as a result, making build times slow. For this reason, this repo doesn't contain that data and it needs to be manually built first using one of the following commands:
 
--- `yarn fetch:geo` for the whole of the UK
--- `yarn fetch:geo:partial` for partial data (just Wales, much quicker)
+-- `npm run fetch:geo` to fetch the data from the [Linked Data API](http://statistics.data.gov.uk/home)
+-- `npm run build:geo` to build pages for England and Wales
+-- `npm run build:geo -- --partial` to build the pages for just Wales (much quicker)
 
 ## License
 

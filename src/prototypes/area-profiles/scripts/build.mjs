@@ -97,10 +97,18 @@ const writeFile = ({ name, data }) =>
   )
 
 const isPartial = Array.from(process.argv).includes("--partial")
+
+if (isPartial) {
+  console.log("Running partial build using data for Wales only")
+} else {
+  console.log(
+    "Running full build of England and Wales. If doing this locally then rebuilds will be slow. Use 'npm run build:geo -- --partial' instead"
+  )
+}
+
 const fileName = isPartial ? partialFilename : fullFilename
 
 const json = await fs.promises.readFile(`${DATA_PATH}/${fileName}.json`, "utf8")
-
 
 rawData = JSON.parse(json)
 countries = mapArea(rawData.countries)
