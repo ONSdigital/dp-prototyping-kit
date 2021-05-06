@@ -2,7 +2,7 @@ node_modules
 dist
 /.env
 src/prototypes/area-profiles/data/areas/*.json
-src/prototypes/area-profiles/data/areas/full.json
-src/prototypes/area-profiles/data/areas/partial.json
+src/prototypes/area-profiles/data/full.json
+src/prototypes/area-profiles/data/partial.json
 # Local Netlify folder
 .netlify

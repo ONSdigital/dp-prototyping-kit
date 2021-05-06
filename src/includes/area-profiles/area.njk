@@ -10,36 +10,17 @@
         </h2>
     </header>
 
-    <div class="md:grid gap-4 grid-cols-3 mb-4">
-        <div class="col-span-1 mb-6">
-            <h2 class="text-base font-bold mb-2">Contents</h2>
-            <ul class="m-0 mb-4 p-0 leading-tight">
-                {% for item in pageContent %}
-                    <li class="m-0 mb-2 p-0 relative">
-                        <span class="absolute">—</span>
-                        <a class="pl-8 inline-block" href="#{{item|slug}}">{{item}}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="col-span-2 mb-6" id="summary">
-            <h2 class="text-md font-bold mb-2">Summary</h2>
-            <p>This area profile covers the {{area.type}} of {{area.name}} and is compiled of data from the 2021 Census.</p>
-            <p>The area profile covers areas within {{area.name}} and topics such as the population, households, housing, economy, education and health. </p>
-            <p>The profile also contains all area related datasets.</p>
-        </div>
-    </div>
 </div>
 
 <section id="key-stats">
     <div class="wrapper">
         <header>
-            <h2 class="text-md font-bold mb-4">Key statistics</h2>
+            <h2 class="text-md font-bold mb-2">Key statistics</h2>
         </header>
         <div class="mb-8">
             <ul class="list-none divide-y divide-grey3 md:flex md:divide-y-0 md:divide-x md:-ml-4">
                 {% for stat in keyStats %}
-                    <li class="p-0 pt-2 mb-2 md:m-0 md:mb-2 md:px-4">
+                    <li class="p-0 {{"pt-0" if loop.index0 === 0 else "pt-2" }} md:m-0 md:mb-2 md:px-4">
                         <h3 class="text-base font-normal md:mb-2">{{stat.title}}</h3>
                         <div class="text-lg font-bold">{{stat.value}}</div>
                     </li>
@@ -80,49 +61,25 @@
     </div>
 </section>
 
-{% set tabContent %}
-<ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3 leading-relaxed">
-    {% for child in area.children %}
-        <li class="m-0 p-0">
-            <a href="{{child.permalink}}">{{child.name}}</a>
-        </li>
-    {% endfor %}
-</ul>
-{% endset %}
-
-{% set tabs = [
-    {
-        title: childrenType,
-        active: true,
-        content: tabContent
-    }, {
-        title: "Statistical areas",
-        active: false,
-        content: tabContent
-    }, {
-        title: "Census areas",
-        active: false,
-        content: tabContent
-    }
-] %}
-
 {% if area.children.length %}
     <section class="wrapper mb-8">
         <div class="mb-8" id="areas-within-{{area.name|slug}}">
             <header>
                 <h2 class="text-md font-bold mb-4">Areas within {{area.name}}</h2>
             </header>
-            {% include "tabs.njk" %}
+            <ul class="list-none m-0 p-0 text-cols-2 md:text-cols-3 leading-relaxed">
+                {% for child in area.children %}
+                    <li class="m-0 p-0">
+                        <a href="{{child.permalink}}">{{child.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
         <div class="mb-8">
-            <a class="text-base icon-arrow p-3 pl-2 border border-blumine border-opacity-30  leading-none" href="#top">Back to top</a>
+            <a class="text-base icon-arrow p-3 pl-2 border border-blumine border-opacity-30 leading-none" href="#top">Back to top</a>
         </div>
     </section>
 {% endif %}
-
-<section class="wrapper">
-    {% include "./tables.njk" %}
-</section>
 
 {% block head %}
     <script>

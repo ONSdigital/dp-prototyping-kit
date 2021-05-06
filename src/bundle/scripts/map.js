@@ -247,11 +247,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       firstSymbolId
     )
 
-    map.addLayer(
+     map.addLayer(
       {
-        id: "area-children-fill",
+        id: "area-fill",
         type: "fill",
-        source: areaChildrenGeoJson.features.length ? "area-children" : "area",
+        source: "area",
         paint: {
           "fill-color": colours.leafGreen,
           "fill-opacity": opacityCaseStatement
@@ -260,44 +260,57 @@ document.addEventListener("DOMContentLoaded", async () => {
       firstSymbolId
     )
 
-    map.addLayer(
-      {
-        id: "children-line",
-        type: "line",
-        source: "area-children",
-        layout: {
-          "line-cap": "round",
-          "line-join": "round",
-          visibility: "visible"
-        },
-        paint: {
-          "line-color": colours.leafGreen,
-          "line-opacity": 0.2,
-          "line-width": 1
-        }
-      },
-      firstSymbolId
-    )
+    // map.addLayer(
+    //   {
+    //     id: "area-children-fill",
+    //     type: "fill",
+    //     source: areaChildrenGeoJson.features.length ? "area-children" : "area",
+    //     paint: {
+    //       "fill-color": colours.leafGreen,
+    //       "fill-opacity": opacityCaseStatement
+    //     }
+    //   },
+    //   firstSymbolId
+    // )
 
-    map.addLayer(
-      {
-        id: "area-children-labels",
-        type: "symbol",
-        source: "area-children-labels",
-        layout: {
-          "text-size": 14,
-          "text-font": ["Open Sans Regular"],
-          visibility: "visible",
-          "text-field": ["get", "name"]
-        },
-        paint: {
-          "text-halo-width": 1,
-          "text-color": "rgb(30, 30, 30)",
-          "text-halo-color": "rgba(255,255,255, 0.8)"
-        }
-      },
-      firstSymbolId
-    )
+    // map.addLayer(
+    //   {
+    //     id: "children-line",
+    //     type: "line",
+    //     source: "area-children",
+    //     layout: {
+    //       "line-cap": "round",
+    //       "line-join": "round",
+    //       visibility: "visible"
+    //     },
+    //     paint: {
+    //       "line-color": colours.leafGreen,
+    //       "line-opacity": 0.2,
+    //       "line-width": 1
+    //     }
+    //   },
+    //   firstSymbolId
+    // )
+
+    // map.addLayer(
+    //   {
+    //     id: "area-children-labels",
+    //     type: "symbol",
+    //     source: "area-children-labels",
+    //     layout: {
+    //       "text-size": 14,
+    //       "text-font": ["Open Sans Regular"],
+    //       visibility: "visible",
+    //       "text-field": ["get", "name"]
+    //     },
+    //     paint: {
+    //       "text-halo-width": 1,
+    //       "text-color": "rgb(30, 30, 30)",
+    //       "text-halo-color": "rgba(255,255,255, 0.8)"
+    //     }
+    //   },
+    //   firstSymbolId
+    // )
 
     if (showArea) {
       map.addSource("area-label", {
@@ -332,72 +345,72 @@ document.addEventListener("DOMContentLoaded", async () => {
       )
     }
 
-    if (siblings) {
-      const siblingsGeoJson = convertAreasToGeoJson(siblings)
+    // if (siblings) {
+    //   const siblingsGeoJson = convertAreasToGeoJson(siblings)
 
-      map.addSource("area-siblings", {
-        type: "geojson",
-        promoteId: "id",
-        data: siblingsGeoJson
-      })
+    //   map.addSource("area-siblings", {
+    //     type: "geojson",
+    //     promoteId: "id",
+    //     data: siblingsGeoJson
+    //   })
 
-      map.addSource("area-siblings-labels", {
-        type: "geojson",
-        data: getCentroids(siblingsGeoJson)
-      })
+    //   map.addSource("area-siblings-labels", {
+    //     type: "geojson",
+    //     data: getCentroids(siblingsGeoJson)
+    //   })
 
-      map.addLayer(
-        {
-          id: "siblings-line",
-          type: "line",
-          source: "area-siblings",
-          layout: {
-            "line-cap": "round",
-            "line-join": "round",
-            visibility: "visible"
-          },
-          paint: {
-            "line-color": colours.grey3,
-            "line-opacity": 0.2,
-            "line-width": 2
-          }
-        },
-        firstSymbolId
-      )
+    //   map.addLayer(
+    //     {
+    //       id: "siblings-line",
+    //       type: "line",
+    //       source: "area-siblings",
+    //       layout: {
+    //         "line-cap": "round",
+    //         "line-join": "round",
+    //         visibility: "visible"
+    //       },
+    //       paint: {
+    //         "line-color": colours.grey3,
+    //         "line-opacity": 0.2,
+    //         "line-width": 2
+    //       }
+    //     },
+    //     firstSymbolId
+    //   )
 
-      map.addLayer(
-        {
-          id: "area-siblings-fill",
-          type: "fill",
-          source: "area-siblings",
-          paint: {
-            "fill-color": colours.grey3,
-            "fill-opacity": opacityCaseStatement
-          }
-        },
-        firstSymbolId
-      )
+    //   map.addLayer(
+    //     {
+    //       id: "area-siblings-fill",
+    //       type: "fill",
+    //       source: "area-siblings",
+    //       paint: {
+    //         "fill-color": colours.grey3,
+    //         "fill-opacity": opacityCaseStatement
+    //       }
+    //     },
+    //     firstSymbolId
+    //   )
 
-      map.addLayer(
-        {
-          id: "area-siblings-labels",
-          type: "symbol",
-          source: "area-siblings-labels",
-          layout: {
-            "text-size": 14,
-            "text-font": ["Open Sans Regular"],
-            visibility: "visible",
-            "text-field": ["get", "name"]
-          },
-          paint: {
-            "text-halo-width": 1,
-            "text-color": "rgb(30, 30, 30)",
-            "text-halo-color": "rgba(255,255,255, 0.8)"
-          }
-        },
-        firstSymbolId
-      )
-    }
+    //   map.addLayer(
+    //     {
+    //       id: "area-siblings-labels",
+    //       type: "symbol",
+    //       source: "area-siblings-labels",
+    //       layout: {
+    //         "text-size": 14,
+    //         "text-font": ["Open Sans Regular"],
+    //         visibility: "visible",
+    //         "text-field": ["get", "name"]
+    //       },
+    //       paint: {
+    //         "text-halo-width": 1,
+    //         "text-color": "rgb(30, 30, 30)",
+    //         "text-halo-color": "rgba(255,255,255, 0.8)"
+    //       }
+    //     },
+    //     firstSymbolId
+    //   )
+    // }
 
     let hoveredAreaId = null
     let selectedStateId = null
