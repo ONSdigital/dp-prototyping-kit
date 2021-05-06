@@ -1,0 +1,111 @@
+{% extends "src/layouts/prototype.njk" %}
+{% block head %}
+<!-- Blockquote styling -->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+.quote {
+	border-left: 0.3rem solid #e2e2e3;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+}
+.quote-body,
+.quote-body > p {
+	font-size: 1.22222rem; 	/* matches .dp-fs-m */
+	font-weight: 600; 			/* semi bold weight */
+	line-height: 1.4; 			/* matches .dp-fs-m */
+}
+.quote-body p:first-of-type::before {
+	content: open-quote;
+	display: inline;
+	margin-left: -0.45rem; 	/* changed from ch to rem as browsers calculate widths inconsistently */
+}
+.quote-body p:last-of-type::after {
+	content: close-quote;
+}
+.quote-body {
+	quotes: "“" "”" "‘" "’";
+}
+.quote::first-line {
+	/*text-indent: -0.75ch; // not supported in all browsers with ::first-line pseudo*/
+}
+.quote-source {
+	font-size: 1rem; /* match regular size */
+	font-style: normal; /* override italic browser default */
+	font-weight: 700;
+	line-height: 1.4;
+	margin-top: 1rem;
+}
+</style>
+<!-- /Blockquote styling -->
+{% endblock head%}
+{% block body %}
+<div class="page-neutral-intro background--gallery">
+	<div class="wrapper">
+	<div class="col-wrap">
+	<div class="col">
+	<nav aria-label="Article breadcrumbs">
+	<div class="breadcrumb-neutral print--hide">
+	<ol class="breadcrumb-neutral__list">
+		<li class="breadcrumb-neutral__item">
+		<a class="breadcrumb-neutral__link" href="/">Home</a>
+		</li>
+		<li class="breadcrumb-neutral__item">
+		<a class="breadcrumb-neutral__link" href="/economy">Experimental</a>
+		</li>
+		<li class="breadcrumb-neutral__item">
+		<a class="breadcrumb-neutral__link" href="/economy/economicoutputandproductivity">Economic output and productivity</a>
+		</li>
+		<li class="breadcrumb-neutral__item">
+		<a class="breadcrumb-neutral__link" href="/economy/economicoutputandproductivity/output">Output</a>
+		</li>
+		<li class="breadcrumb-neutral__item">Coronavirus: how people and businesses have adapted to lockdowns</li>
+	</ol>
+	</div>
+	</nav>
+	<div class="col col--md-47 col--lg-46">
+	<h1 class="page-neutral-intro__title ">Diary of a nation: life in lockdown</h1>
+	{# <p class="page-neutral-intro__content">The economic toll of lockdown has been lower in autumn and winter 2020 and early 2021 than it was in spring 2020, with people adapting their behaviours and spending habits and businesses making changes to working practices. </p> #}
+	<p class="page-neutral-intro__meta margin-top--0 margin-bottom--3">19 March 2021</p>
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+{#  #}
+		<div class="wrapper">
+			<div class="col-wrap border-bottom--iron-md">
+				<div class="col col--md-31 col--lg-41 margin-left-md--1">
+				<article class="col col--md-36 col--lg-39 page-content__main-content padding-bottom">
+				<div class="section__content--markdown"><section><header><h3>How long before life returns to normal?</h3></header></section></div>
+				<p>In the first two weeks of April, half of adults said their well-being was being affected by the pandemic. By this time, many had been confined to their homes, except for essential shopping and exercise, for several weeks.</p>
+				<figure class="quote">
+					<blockquote class="quote-body">
+						<p>Whilst in self-isolation, my life is on hold.</p>
+					</blockquote>
+					<figcaption class="quote-source">Man, 20 to 24, West Midlands</figcaption>
+				</figure>
+				<p>Alongside this, the number of death registrations involving COVID-19 was at its highest: the number of weekly deaths in England and Wales recorded by the Office for National Statistics (ONS) was 8,758 on the week ending 17 April. In the same week, lockdown measures were extended for a further three weeks.</p>
+				{# <p>Phasellus nec sapien nec orci dignissim accumsan. Fusce non posuere arcu, quis dignissim enim. Pellentesque ex metus, lobortis sit amet eros blandit, accumsan convallis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis accumsan tempus dui ut dictum. Vivamus feugiat augue sed porta sodales. Donec luctus maximus massa mattis rhoncus.</p> #}
+				<figure class="quote">
+					<blockquote class="quote-body">
+						<p>I miss my friends and family and am finding working from home stressful.</p>
+					</blockquote>
+					<figcaption class="quote-source">Woman, age 25 to 30 years, Wales</figcaption>
+				</figure>
+				<p>Throughout April 2020, more than three-quarters of adults said that staying in touch with family and friends remotely, helped them to cope.</p>
+				<figure class="quote">
+					<blockquote class="quote-body text-sm">
+						<p>Am unable to do any of the things which normally fill my life and keep loneliness at bay, i.e. visiting friends, shopping, visiting places of interest, seeing children.</p>
+					</blockquote>
+					<figcaption class="quote-source">Man, age 20 to 24 years, West Midlands</figcaption>
+				</figure>
+				<figure class="quote">
+					<blockquote class="quote-body"><p>Have no social life as can't see my son or friends so feeling isolated and lonely.</p></blockquote>
+				</figure>
+				<p>Lockdown measures were first introduced on 23 March 2020. While this created huge changes for many, with schools, workplaces and all non-essential retailers being ordered to close, more than half of adults surveyed at the time said they thought life would be back to normal within six months.</p>
+				</article>
+				</div>
+			</div>
+		</div>
+{% endblock body %}
