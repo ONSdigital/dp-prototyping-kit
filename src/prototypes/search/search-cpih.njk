@@ -1,0 +1,58 @@
+{% extends "src/layouts/prototype.njk" %}
+
+{% block body %}
+    <div class="wrapper mb-8">
+        {# {% include "breadcrumbs.njk" %} #}
+
+        <header class="mb-8 mt-8">
+            <h1 class="mb-1 p-0 text-2xl ">{{count}} results for <span class="font-bold">{{search_phrase}}</span></h1>
+        </header>
+        
+        <div class="col-wrap">
+          <div class="col col--lg-one-third col--md-one-third mb-16">
+          <h3 class="font-bold text-md pb-4" style="border-bottom:2px solid #BCBCBD">Filter results</h3>
+          
+          {# Include search filters #}
+          </div>
+          <div class="col col--lg-two-thirds col--md-two-thirds mb-16" id="results-list">
+            {# Sort search #}
+            <div style="border-bottom:2px solid #BCBCBD" class="pb-4">
+            <form>
+              <div class="dp-field">
+                <label class="dp-label text-md font-bold" for="sort">Sort by</label>
+                <select id="select" name="select" class="dp-input dp-input--select ml-2">
+                    <option value="match" selected>Best match</option>
+                    <option value="date-asc">By date</option>
+                </select>
+              </div>
+            </form>
+            </div>
+            <ul class="mt-4">
+            {% for item in items %}
+            <li class="mb-8 mt-0 p-0">
+              <h3 class="mb-2 p-0 text-md font-bold">
+                <a href="{{item.uri}}">{{item.description.title}}</a>{%if item.description.latest_release === true%} <span class="font-normal">(Latest&nbsp;release)</span>{%endif%}</h3>
+                <p><span class="font-bold">Released:</span> {{item.description.release_date | truncate(10,true,"") | replace("-","/")}}  |  <span class="font-bold">{{item.type | capitalize | replace("_"," ")}}</span></p>
+                <p>{%-if item.description.summary-%}{{item.description.summary | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>") | safe}}{%-else-%}{{item.description.meta_description | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>")|safe}}{%-endif-%}</p>
+            </li>
+            {% endfor %}
+            </ul>
+            {# {% if area.children | length %}
+                <ul class="list-none text-base leading-relaxed m-0 p-0">
+                    {% for child in area.children %}
+                        <li class="m-0 p-0">
+                            <a href="{{child.permalink}}" class="text-base">{{child.name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="border-2 border-grey4 p-4 mt-4">
+                    <span class="">No data for countries found. Please run</span>
+                    <code class="bg-grey5 p-2 ml-1">yarn build:geo</code>
+                </div>
+            {% endif %} #}
+        </div>
+        
+        </div>
+    </div>
+{% endblock body %}
