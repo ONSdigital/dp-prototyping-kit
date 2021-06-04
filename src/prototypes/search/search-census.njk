@@ -74,7 +74,11 @@
               <h3 class="mb-2 p-0 text-md font-bold">
                 <a href="https://www.ons.gov.uk{{item.uri}}">{{item.description.title}}</a>{%if item.description.latest_release === true%} <span class="font-normal">(Latest&nbsp;release)</span>{%endif%}</h3>
                 <p><span class="font-bold">Released:</span> {{item.description.release_date | truncate(10,true,"") | replace("-","/")}}  |  <span class="font-bold">{{item.type | capitalize | replace("_"," ")}}</span></p>
-                <p>{%-if item.description.summary-%}{{item.description.summary | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>") | safe}}{%-else-%}{{item.description.meta_description | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>")|safe}}{%-endif-%}</p>
+                <p>{%-if item.description.summary-%}
+                  {{item.description.summary | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>") | safe}}
+                  {%-else-%}
+                  {{item.description.meta_description | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>") | safe}}
+                {%-endif-%}</p>
             </li>
             {% endfor %}
             </ul>
