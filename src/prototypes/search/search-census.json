@@ -1,0 +1,569 @@
+{
+	"search_phrase":"census",
+    "content_types": [
+        {
+            "count": 999,
+            "type": "static_adhoc"
+        },
+        {
+            "count": 244,
+            "type": "static_page"
+        },
+        {
+            "count": 113,
+            "type": "static_foi"
+        },
+        {
+            "count": 80,
+            "type": "article"
+        },
+        {
+            "count": 75,
+            "type": "static_article"
+        },
+        {
+            "count": 71,
+            "type": "static_landing_page"
+        },
+        {
+            "count": 68,
+            "type": "dataset_landing_page"
+        },
+        {
+            "count": 36,
+            "type": "reference_tables"
+        },
+        {
+            "count": 17,
+            "type": "bulletin"
+        },
+        {
+            "count": 9,
+            "type": "static_methodology"
+        },
+        {
+            "count": 2,
+            "type": "static_methodology_download"
+        }
+    ],
+    "count": 1714,
+    "items": [
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Peter Stokes",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Key Statistics and Quick Statistics for Local Authorities in the United Kingdom",
+                "headline1": "On census day 27 March 2011, the proportion of the usually resident population in the UK aged 16 and over who were married had decreased from 51 per cent in 2001 to 47 per cent in 2011",
+                "headline2": "In 2011 the majority of UK residents described themselves as belonging to a white ethnic group (87 per cent, 55 million)",
+                "headline3": "In 2011, the top three countries of birth of non-UK born residents in the UK were, in descending order, India, Poland and Pakistan",
+                "keywords": [
+                    "household resident",
+                    "communal establishment resident",
+                    "usual resident",
+                    "ethnic group"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "national_statistic": true,
+                "release_date": "2013-10-11T00:00:00.000Z",
+                "summary": "Defining characteristics of the UK population on the topics of population, ethnic group and country of birth, health and housing and accommodation.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom/2013-10-11"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Emma White",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Quick Statistics for Wales, March 2011",
+                "headline1": "Of those with a main language other than English or Welsh (three per cent, 84,000), 77 per cent (65,000) could speak English or Welsh very well or well",
+                "headline2": "Ninety seven per cent (2.9 million) of usual residents in Wales aged three years and over reported English or Welsh as their main language in 2011",
+                "headline3": "The second most reported main language in Wales was Polish (0.6 per cent, 17,000), followed by Arabic (0.2 per cent, 7,000)",
+                "keywords": [
+                    "2011 Census",
+                    "population estimates",
+                    "usual residents",
+                    "household estimates"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "This Census release follows that of the Key Statistics on 11 December 2012 and contains detailed geographical breakdowns and detailed Quick Statistics tables for residents' characteristics.",
+                "national_statistic": true,
+                "release_date": "2013-01-30T00:00:00.000Z",
+                "summary": "",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census"
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011censusquickstatisticsforwales/2013-01-30"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Emma White",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Key Statistics for Wales, March 2011",
+                "headline1": "The usually resident population of Wales was 3.1 million in 2011, a five per cent increase since 2001. Nearly one in five (18 per cent, 563,000) of residents were aged 65 or over",
+                "headline2": "As was the case in 2001, in 2011 Wales had a higher percentage of residents with a long term health problem or disability, just under a quarter (23 per cent, 696,000), higher than any England region",
+                "headline3": "Fifty eight per cent (1.8 million) of residents of Wales stated Christian as their religion in 2011, a 14 percentage point drop since 2001, a larger decrease than any of the England regions. Almost one third (32 per cent, 983,000) of the population in Wales stated they had no religion in 2011, more than any of the England regions",
+                "keywords": [
+                    "2011 Census,religion,tenure,population,estimates,usual,residents,household,passports,ethnic,group,qualifications,students,Welsh,language,health,care,car,availability,birth,country"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "The first release of figures that describe the population of Wales and add detail to the 2011 Census population estimates published in July 2012.",
+                "national_statistic": true,
+                "release_date": "2012-12-11T00:00:00.000Z",
+                "summary": "The first release of figures that describe the population of Wales and add detail to the 2011 Census population estimates published in July 2012.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census,religion,tenure,population,estimates,usual,residents,household,passports,ethnic,group,qualifications,students,Welsh,language,health,care,car,availability,birth,country"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 100,
+                            "start": 95
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 100,
+                            "start": 95
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011censuskeystatisticsforwales/2012-12-11"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Peter Stokes",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Key Statistics and Quick Statistics for Local Authorities in the United Kingdom",
+                "headline1": "According to censuses carried out in the UK in 2011, more than a quarter (27 per cent, 13.9 million) of the UK population aged 16 and over had achieved a Level 4 or above qualification such as a degree or other higher qualification or equivalent",
+                "headline2": "In 2011, 23 per cent (11.9 million) of usual residents aged 16 and over in the UK had no qualifications",
+                "headline3": "Residents of England were most likely to have a Level 4 or above qualification (27 per cent, 11.8 million) while residents of Northern Ireland were most likely to have no qualifications (29 per cent, 417,000)",
+                "keywords": [
+                    "household spaces,household,resident,communal,establishment,composition,accomodation,spaces"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "This release provides the second set of 2011 Census Key and Quick Statistics tables for each local authority district in the UK.",
+                "national_statistic": true,
+                "release_date": "2013-12-04T00:00:00.000Z",
+                "summary": "This release provides the second set of 2011 Census Key and Quick Statistics tables for each local authority district in the UK.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "meta_description": [
+                        {
+                            "end": 51,
+                            "start": 46
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 51,
+                            "start": 46
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/keystatisticsandquickstatisticsforlocalauthoritiesintheunitedkingdom/2013-12-04"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Peter Stokes",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Detailed Characteristics for England and Wales, March 2011",
+                "headline1": "White: Irish was the oldest ethnic group, with a median age of 53, compared to the national median of 39.  People in the White: British ethnic group had a median age of 42",
+                "headline2": "People in mixed ethnic groups had the lowest median ages, with the Mixed: White and Black African having a median age of 16",
+                "headline3": "Almost half (46 per cent, 3.4 million) of those born outside the UK held a UK passport in 2011",
+                "keywords": [
+                    "2011 Census",
+                    " Detailed Characteristics",
+                    " Usual resident",
+                    " Long-term health problem",
+                    "  Ethnic group",
+                    " Ethnicity",
+                    " Race",
+                    " English language",
+                    " Main language",
+                    " Religion",
+                    " Health",
+                    " Care",
+                    " Long-term health problem",
+                    " Economic activity",
+                    " Identity",
+                    " Country of birth",
+                    "Ethnicity",
+                    "Identity",
+                    "Country of birth",
+                    "Main language",
+                    "Religion"
+                ],
+                "latest_release": true,
+                "meta_description": "2011 Census statistics provide a rich source of information about the number, distribution and characteristics of the population in England and Wales as at census day (27 March 2011). The statistics included in this release provide the first detailed cross tabulations of two or more topics from the census that add to the detail already provided in earlier releases.",
+                "national_statistic": true,
+                "release_date": "2013-05-15T23:00:00.000Z",
+                "summary": "2011 Census statistics provide a rich source of information about the number, distribution and characteristics of the population in England and Wales as at census day (27 March 2011). The statistics included in this release provide the first detailed cross tabulations of two or more topics from the census that add to the detail already provided in earlier releases.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        },
+                        {
+                            "end": 162,
+                            "start": 157
+                        },
+                        {
+                            "end": 306,
+                            "start": 301
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        },
+                        {
+                            "end": 162,
+                            "start": 157
+                        },
+                        {
+                            "end": 306,
+                            "start": 301
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011census/2013-05-16"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Garnett Compton",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Population and household estimates for the United Kingdom, March 2011",
+                "headline1": "The population of the UK on census day, 27 March 2011, was 63.2 million; the largest it had ever been",
+                "headline2": "The estimated population of England was 53.0 million people, 5.3 million people in Scotland, 3.1 million people in Wales and 1.8 million people in Northern Ireland",
+                "headline3": "The average household size in the UK was 2.3 people per household, compared to 2.4 in 2001",
+                "keywords": [
+                    "2011 Census",
+                    "population estimates",
+                    "usual residents",
+                    "household estimates"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "Estimates of the usually resident population, by five-year age bands and sex, as well as household estimates for all local authorities.",
+                "national_statistic": true,
+                "release_date": "2013-03-21T00:00:00.000Z",
+                "summary": "Estimates of the usually resident population, by five-year age bands and sex, as well as household estimates for all local authorities.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census"
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationandhouseholdestimatesfortheunitedkingdom/2011-03-21"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Jonathan Swan",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Population Estimates for the United Kingdom, March 2011",
+                "headline1": "On census night, the population of the United Kingdom (UK) was estimated to be 63.2 million",
+                "headline2": "There were 31 million men and 32.2 million women in the UK",
+                "headline3": "The estimated populations of the four constituent countries of the UK are 53 million people in England, 5.3 million in Scotland, 3.1 million in Wales and 1.8 million in Northern Ireland",
+                "keywords": [
+                    "2011 Census,England,Wales,population,esimates"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "Estimates of the usually resident population of the UK and its constituent countries, by age and sex.",
+                "national_statistic": true,
+                "release_date": "2012-12-17T00:00:00.000Z",
+                "summary": "Estimates of the usually resident population of the UK and its constituent countries, by age and sex.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census,England,Wales,population,esimates"
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011censuspopulationestimatesfortheunitedkingdom/2012-12-17"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Emma White",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Key Statistics for England and Wales, March 2011",
+                "headline1": "In 2011, four out of every five (81 per cent, 45.5 million) residents of England and Wales described themselves as being in good or very good health",
+                "headline2": "Of the 13 per cent (7.5 million) of residents on 27 March 2011 who were born outside of the UK, just over half (3.8 million) arrived in the last 10 years",
+                "headline3": "The number of cars and vans available for use by households increased from 23.9 million to 27.3 million between 2001 and 2011",
+                "keywords": [
+                    "2011 Census,religion,economic activity,tenure,population,estimates,usual,residents,density,passports,country,birth,health,car,ethnic,availability,qualifications,students,Welsh"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "The defining characteristics of the population: who we are, how we live and what we do.",
+                "national_statistic": true,
+                "release_date": "2012-12-11T00:00:00.000Z",
+                "summary": "The defining characteristics of the population: who we are, how we live and what we do.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census,religion,economic activity,tenure,population,estimates,usual,residents,density,passports,country,birth,health,car,ethnic,availability,qualifications,students,Welsh"
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011censuskeystatisticsforenglandandwales/2012-12-11"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Peter Stokes",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Population and Household Estimates for Small Areas in England and Wales, March 2011",
+                "headline1": "Output areas (OAs) are the lowest level of geography produced across all census topics",
+                "headline2": "OAs contain approximately equal numbers of usual residents, and are intended to allow reporting of statistics on a consistent geographical base",
+                "headline3": "In 2011 there were 181,408 OAs in England and Wales with an average population of 309",
+                "keywords": [
+                    "2011 Census",
+                    "population estimates",
+                    "usual residents",
+                    "household estimates",
+                    "Census"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "2011 Census statistics provide a rich source of information about the number, distribution and characteristics of the population in England and Wales. The statistics are used to understand similarities and differences in the population locally, regionally and nationally. This information underpins the allocation of billions of pounds of public money to provide services like education, transport and health. Decisions are taken every day using census statistics.",
+                "national_statistic": true,
+                "release_date": "2012-11-23T00:00:00.000Z",
+                "summary": "This is the first release of small area statistics from the 2011 Census, with extra information to supplement the results published on 16 July 2012.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census"
+                        },
+                        {
+                            "end": 6,
+                            "start": 1,
+                            "value": "Census"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        },
+                        {
+                            "end": 452,
+                            "start": 447
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 71,
+                            "start": 66
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/2011censuspopulationandhouseholdestimatesforsmallareasinenglandandwales/2012-11-23"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "census.customerservices@ons.gov.uk",
+                    "name": "Peter Stokes",
+                    "telephone": "+44 (0)1329 444972"
+                },
+                "edition": "Number of people with second addresses in local authorities in England and Wales, March 2011",
+                "headline1": "At the time of the 2011 Census, 1,570,228 usual residents in England and Wales (2.8 per cent of the usual resident population) reported having a second address in another local authority in England and Wales, that they used for 30 days or more each year",
+                "headline2": "47,733 usual residents of England and Wales (around 0.1 per cent of the usual resident population) had a second address in either Scotland or Northern Ireland",
+                "headline3": "820,814 usual residents of England and Wales (1.5 per cent of the usual resident population) had a second address outside of the United Kingdom",
+                "keywords": [
+                    "2011 Census,population,estimates,usual,residents"
+                ],
+                "language": "English",
+                "latest_release": true,
+                "meta_description": "We take a look at the number of usual residents in England and Wales who reported having a second address outside of the local authority in which they were usually resident.",
+                "national_statistic": true,
+                "release_date": "2012-10-22T00:00:00.000Z",
+                "summary": "We take a look at the number of usual residents in England and Wales who reported having a second address outside of the local authority in which they were usually resident.",
+                "title": "2011 Census"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 11,
+                            "start": 6,
+                            "value": "2011 Census,population,estimates,usual,residents"
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 11,
+                            "start": 6
+                        }
+                    ]
+                }
+            },
+            "type": "bulletin",
+            "uri": "/peoplepopulationandcommunity/housing/bulletins/2011censusnumberofpeoplewithsecondaddressesinlocalauthoritiesinenglandandwales/2012-10-22"
+        }
+    ],
+    "took": 8
+}

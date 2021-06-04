@@ -1,0 +1,85 @@
+{% extends "src/layouts/prototype.njk" %}
+
+{% block body %}
+    <div class="wrapper mb-8">
+        {# {% include "breadcrumbs.njk" %} #}
+
+        <header class="mb-8 mt-8">
+            <h1 class="mb-1 p-0 text-2xl ">{{count}} results for <span class="font-bold">{{search_phrase}}</span></h1>
+        </header>
+        
+        <div class="col-wrap">
+          <div class="col col--lg-one-third col--md-one-third mb-16">
+          <h3 class="font-bold text-md pb-4 mb-2 mb-4" style="border-bottom:2px solid #BCBCBD">Filter results</h3>
+          <fieldset class="fieldset" aria-controls="adv-filter-gallery">
+                <legend class="fieldset__legend">Content type</legend>
+                <div class="input-items">
+                  <p class="checkboxes__label">Show only:</p>
+                  <div class="checkboxes__items">
+                    <p class="checkboxes__item">
+                      {%- for item in content_types %}
+                      {%- if item.type === 'dataset_landing_page' %}
+                      <span class="checkbox checkbox--toggle">
+                        <input type="checkbox" id="{{item.type}}" class="focus:ring-gray-500 h-5 w-5 text-gray-600 border-gray-300 rounded" value="{{item.type}}" data-filter="{{item.type}}">
+                        <label class="text-base" for="{{item.type}}" id="{{item.type}}_label">{{item.type | capitalize | replace("_"," ")}} ({{- item.count -}})
+                        </label>
+                      </span>
+                      {% endif -%}
+                      {% endfor -%}
+                    </p>
+                    <p class="checkboxes__item">
+                      {%- for item in content_types %}
+                      {%- if item.type === 'article' %}
+                      <span class="checkbox checkbox--toggle">
+                        <input type="checkbox" id="{{item.type}}" class="focus:ring-gray-500 h-5 w-5 text-gray-600 border-gray-300 rounded" value="{{item.type}}" data-filter="{{item.type}}">
+                        <label class="text-base" for="{{item.type}}" id="{{item.type}}_label">{{item.type | capitalize}} (
+                            {{- item.count -}})
+                        </label>
+                      </span>
+                      {% endif -%}
+                      {% endfor -%}
+                    </p>
+                    <p class="checkboxes__item">
+                      {%- for item in content_types %}
+                      {%- if item.type === 'freedom of information' %}
+                      <span class="checkbox checkbox--toggle">
+                        <input type="checkbox" id="{{item.type}}" class="focus:ring-gray-500 h-5 w-5 text-gray-600 border-gray-300 rounded" value="{{item.type}}" data-filter="{{item.type}}">
+                        <label class="text-base" for="{{item.type}}" id="{{item.type}}_label">{{item.type | capitalize}} (
+                            {{- item.count -}})
+                        </label>
+                      </span>
+                      {% endif -%}
+                      {% endfor -%}
+                    </p>
+                  </div></div></fieldset>
+          {# Include search filters #}
+          <legend class="fieldset__legend">Keywords</legend>
+          </div>
+          <div class="col col--lg-two-thirds col--md-two-thirds mb-16" id="results-list">
+            {# Sort search #}
+            <div style="border-bottom:2px solid #BCBCBD" class="pb-4">
+            <form>
+              <div class="dp-field">
+                <label class="dp-label text-md font-bold" for="sort">Sort by</label>
+                <select id="select" name="select" class="dp-input dp-input--select ml-2">
+                    <option value="match" selected>Best match</option>
+                    <option value="date-asc">By date</option>
+                </select>
+              </div>
+            </form>
+            </div>
+            <ul class="mt-4">
+            {% for item in items %}
+            <li class="mb-8 mt-0 p-0">
+              <h3 class="mb-2 p-0 text-md font-bold">
+                <a href="https://www.ons.gov.uk{{item.uri}}">{{item.description.title}}</a>{%if item.description.latest_release === true%} <span class="font-normal">(Latest&nbsp;release)</span>{%endif%}</h3>
+                <p><span class="font-bold">Released:</span> {{item.description.release_date | truncate(10,true,"") | replace("-","/")}}  |  <span class="font-bold">{{item.type | capitalize | replace("_"," ")}}</span></p>
+                <p>{%-if item.description.summary-%}{{item.description.summary | replace(search_phrase, '<span class="highlight">'+search_phrase+'</span>') | safe}}{%-else-%}{{item.description.meta_description | replace(search_phrase, '<span class="highlight">'+search_phrase+'</span>')|safe}}{%-endif-%}</p>
+            </li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+        </div>
+    </div>
+{% endblock body %}

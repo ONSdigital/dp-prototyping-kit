@@ -1,0 +1,496 @@
+{
+	"search_phrase":"CPIH",
+    "content_types": [
+        {
+            "count": 1529,
+            "type": "timeseries"
+        },
+        {
+            "count": 108,
+            "type": "article"
+        },
+        {
+            "count": 62,
+            "type": "bulletin"
+        },
+        {
+            "count": 21,
+            "type": "dataset_landing_page"
+        },
+        {
+            "count": 20,
+            "type": "article_download"
+        },
+        {
+            "count": 19,
+            "type": "freedom of information"
+        },
+        {
+            "count": 11,
+            "type": "static_methodology"
+        },
+        {
+            "count": 4,
+            "type": "static_page"
+        },
+        {
+            "count": 1,
+            "type": "compendium_landing_page"
+        }
+    ],
+    "count": 1775,
+    "items": [
+        {
+            "description": {
+                "contact": {
+                    "email": "chris.payne@ons.gov.uk ",
+                    "name": "Chris Payne",
+                    "telephone": "+44 (0)1633 455321"
+                },
+                "keywords": [
+                    "Inflation",
+                    "Economy",
+                    "Users"
+                ],
+                "latest_release": true,
+                "meta_description": "This Compendium aims to provide users with a comprehensive and accessible source of information on the Consumer Prices Index, including owner occupiers’ Housing costs (CPIH). This Compendium will focus chiefly on the measurement of Owner Occupiers’ Housing costs (OOH). ",
+                "national_statistic": false,
+                "next_release": "12 October 2017",
+                "release_date": "2016-10-27T23:00:00.000Z",
+                "summary": "",
+                "title": "CPIH Compendium"
+            },
+            "matches": {
+                "description": {
+                    "meta_description": [
+                        {
+                            "end": 174,
+                            "start": 171
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "article",
+            "uri": "/economy/inflationandpriceindices/articles/cpihcompendium/2016-10-13"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "macro@ons.gov.uk",
+                    "name": "Kathryn Keane",
+                    "telephone": "+44 (0)1633 455714"
+                },
+                "keywords": [
+                    "intensity",
+                    "penetration",
+                    "direct",
+                    "indirect",
+                    "total"
+                ],
+                "meta_description": "Estimated percentage of final household consumption that is directly or indirectly due to imports.",
+                "national_statistic": false,
+                "next_release": "To be announced",
+                "release_date": "2019-07-16T23:00:00.000Z",
+                "summary": "Estimated percentage of final household consumption that is directly or indirectly due to imports, for each classification of individual consumption by purpose (COICOP) class in the UK.",
+                "title": "Total import intensity for each COICOP class: CPIH"
+            },
+            "matches": {
+                "description": {
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 50,
+                            "start": 47
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/importpenetrationratesforcpih"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "cpi@ons.gov.uk",
+                    "name": "Chris Payne ",
+                    "telephone": "+44 (0)1633 456900"
+                },
+                "keywords": [
+                    "CPIH",
+                    "plutocratic",
+                    "groups",
+                    "inflation",
+                    "household"
+                ],
+                "meta_description": "Plutocratically weighted and CPIH-consistent indices, annual inflation rates, expenditure shares and contributions for UK household groups.",
+                "national_statistic": false,
+                "next_release": "20 May 2020",
+                "release_date": "2020-02-19T00:00:00.000Z",
+                "summary": "Quarterly data on plutocratically weighted and CPIH-consistent indices, annual inflation rates, expenditure shares and contributions for UK household groups.",
+                "title": "CPIH-consistent inflation rate estimates for UK household groups (plutocratic weighting)"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 4,
+                            "start": 1,
+                            "value": "CPIH"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 33,
+                            "start": 30
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 51,
+                            "start": 48
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/cpihconsistentinflationrateestimatesforukhouseholdgroupsplutocraticweighting"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "economic.advice@ons.gov.uk",
+                    "name": "Kathryn Keane",
+                    "telephone": " +44 (0)1633 455714"
+                },
+                "keywords": [
+                    "Prices",
+                    "CPIH",
+                    "Economy",
+                    "Imports",
+                    "PPI"
+                ],
+                "meta_description": "A longer time series of the contributions to the Consumer Prices Index including owner occupiers' housing costs (CPIH) and Consumer Prices Index (CPI), UK, monthly.",
+                "national_statistic": false,
+                "next_release": "20 May 2020",
+                "release_date": "2020-04-21T23:00:00.000Z",
+                "summary": "A longer time series of the contributions to the Consumer Prices Index including owner occupiers' housing costs (CPIH) and Consumer Prices Index (CPI), UK, monthly.",
+                "title": "Contributions to the 12-month rate of CPIH and CPI by import intensity"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 4,
+                            "start": 1,
+                            "value": "CPIH"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 117,
+                            "start": 114
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 117,
+                            "start": 114
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 42,
+                            "start": 39
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/contributionstothe12monthrateofcpihbyimportintensity"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "cpi@ons.gov.uk",
+                    "name": "Chris Payne ",
+                    "telephone": "+44 (0)1633 456900"
+                },
+                "keywords": [
+                    "CPHI",
+                    "democratic",
+                    "groups",
+                    "inflation",
+                    "household"
+                ],
+                "meta_description": "Quarterly data on democratically weighted and CPIH-consistent indices, annual inflation rates, expenditure shares and contributions for UK household groups.",
+                "national_statistic": false,
+                "next_release": "20 May 2020",
+                "release_date": "2020-02-19T00:00:00.000Z",
+                "summary": "Quarterly data on democratically weighted and CPIH-consistent indices, annual inflation rates, expenditure shares.",
+                "title": "CPIH-consistent inflation rate estimates for UK household groups (democratic weighting)"
+            },
+            "matches": {
+                "description": {
+                    "meta_description": [
+                        {
+                            "end": 50,
+                            "start": 47
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 50,
+                            "start": 47
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/cpihconsistentinflationrateestimatesforukhouseholdgroupsdemocraticweighting"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "tanya.flower@ons.gov.uk",
+                    "name": "Tanya Flower",
+                    "telephone": "+44 (0)1633 455171 "
+                },
+                "keywords": [
+                    "Prices",
+                    "economy",
+                    "income",
+                    "deciles",
+                    "household spending"
+                ],
+                "meta_description": "Consumer Prices Index including owner occupiers’ housing costs (CPIH)-consistent inflation rates calculated for different income groups in the UK, by category of spend. Data are for the period 2005 to 2018.",
+                "national_statistic": false,
+                "release_date": "2018-08-14T23:00:00.000Z",
+                "summary": "Consumer Prices Index including owner occupiers’ housing costs (CPIH)-consistent inflation rates calculated for different income groups in the UK, by category of spend. Data are for the period 2005 to 2018.",
+                "title": "CPIH-consistent inflation rates for income groups by category of spend"
+            },
+            "matches": {
+                "description": {
+                    "meta_description": [
+                        {
+                            "end": 70,
+                            "start": 67
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 70,
+                            "start": 67
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/cpihconsistentinflationratesforincomegroupsbycategoryofspend"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "tanya.flower@ons.gov.uk",
+                    "name": "Tanya Flower",
+                    "telephone": "+44(0)1633 455171 "
+                },
+                "edition": "January 2012 to June 2017",
+                "keywords": [
+                    "inflation",
+                    "shrinking",
+                    "chocolate",
+                    "confectionary",
+                    "food"
+                ],
+                "meta_description": "Shrinkflation is used to describe the business practice of changing product pack size, while keeping its price the same. This article examines the effect of this practice on inflation.",
+                "national_statistic": false,
+                "release_date": "2017-07-23T23:00:00.000Z",
+                "summary": "",
+                "title": "The impact of Shrinkflation on CPIH, UK"
+            },
+            "matches": {
+                "description": {
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 35,
+                            "start": 32
+                        }
+                    ]
+                }
+            },
+            "type": "article",
+            "uri": "/economy/inflationandpriceindices/articles/theimpactofshrinkflationoncpihuk/january2012tojune2017"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "cpi@ons.gov.uk",
+                    "name": "Chris Payne",
+                    "telephone": "Consumer Price Inflation Enquiries: +44 (0)1633 456900"
+                },
+                "keywords": [
+                    "inflation",
+                    "CPIH",
+                    "CPI",
+                    "RPI",
+                    "consumer price inflation",
+                    "OOH"
+                ],
+                "meta_description": "Historical class-level data for the Consumer Prices Index including owner occupiers' housing costs (CPIH), which extends the series back to 1988. Data are for the period 1988 to 2005 and are for indicative purposes only and do not form part of the National Statistic series.",
+                "national_statistic": false,
+                "release_date": "2018-12-14T00:00:00.000Z",
+                "summary": "Historical class-level data for the Consumer Prices Index including owner occupiers' housing costs (CPIH), which extends the series back to 1988. Index values for 1988 to 2004, and annual growth rates for 1989 to 2005 are provided for indicative purposes only and do not form part of the National Statistic series. ",
+                "title": "Consumer Prices Index including owner occupiers' housing costs (CPIH) historical series "
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 4,
+                            "start": 1,
+                            "value": "CPIH"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 104,
+                            "start": 101
+                        }
+                    ],
+                    "summary": [
+                        {
+                            "end": 104,
+                            "start": 101
+                        }
+                    ],
+                    "title": [
+                        {
+                            "end": 68,
+                            "start": 65
+                        }
+                    ]
+                }
+            },
+            "type": "dataset_landing_page",
+            "uri": "/economy/inflationandpriceindices/datasets/consumerpricesindexincludingowneroccupiershousingcostscpihhistoricalseries"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "cpi@ons.gov.uk",
+                    "name": " Tanya Flower",
+                    "telephone": "+44 (0)1633 455171 "
+                },
+                "edition": "2005 to 2019",
+                "keywords": [
+                    "CPIH",
+                    "prices",
+                    "economy",
+                    "tenure",
+                    "renters"
+                ],
+                "meta_description": "Estimates of inflation rates for different types of households in the UK on a Consumer Prices Index including owner occupiers' housing costs (CPIH)-consistent basis.",
+                "national_statistic": false,
+                "next_release": "14 August 2019",
+                "release_date": "2019-05-21T23:00:00.000Z",
+                "summary": "",
+                "title": "CPIH-consistent inflation rate estimates for UK household groups"
+            },
+            "matches": {
+                "description": {
+                    "keywords": [
+                        {
+                            "end": 4,
+                            "start": 1,
+                            "value": "CPIH"
+                        }
+                    ],
+                    "meta_description": [
+                        {
+                            "end": 146,
+                            "start": 143
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "article",
+            "uri": "/economy/inflationandpriceindices/articles/cpihconsistentinflationrateestimatesforukhouseholdgroups20052017/2005to2019"
+        },
+        {
+            "description": {
+                "contact": {
+                    "email": "tanya.flower@ons.gov.uk",
+                    "name": "Tanya Flower",
+                    "telephone": "+44 (0)1633 455171"
+                },
+                "edition": "2005 to 2018",
+                "keywords": [
+                    "Prices",
+                    "economy",
+                    "income",
+                    "deciles",
+                    "household spending"
+                ],
+                "latest_release": true,
+                "meta_description": "Consumer Prices Index including owner occupiers’ housing costs (CPIH)-consistent inflation rates calculated for different income groups, by category of spend.",
+                "national_statistic": false,
+                "release_date": "2018-08-14T23:00:00.000Z",
+                "summary": "",
+                "title": "CPIH-consistent inflation rates for income groups by category of spend, UK"
+            },
+            "matches": {
+                "description": {
+                    "meta_description": [
+                        {
+                            "end": 70,
+                            "start": 67
+                        }
+                    ],
+                    "summary": null,
+                    "title": [
+                        {
+                            "end": 4,
+                            "start": 1
+                        }
+                    ]
+                }
+            },
+            "type": "article",
+            "uri": "/economy/inflationandpriceindices/articles/cpihconsistentinflationratesforincomegroupsbycategoryofspenduk/2005to2018"
+        }
+    ],
+    "took": 7
+}
