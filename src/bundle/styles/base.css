@@ -10,7 +10,7 @@ body {
 
 a {
   @apply underline;
-  @apply text-nightBlue;
+  @apply text-oceanBlue;
 
   &:hover {
     @apply no-underline;

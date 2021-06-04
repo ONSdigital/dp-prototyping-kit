@@ -14,14 +14,14 @@
           <fieldset class="fieldset" aria-controls="adv-filter-gallery">
                 <legend class="fieldset__legend">Content type</legend>
                 <div class="input-items">
-                  <p class="checkboxes__label"></p>
+                  <p class="checkboxes__label">Show only:</p>
                   <div class="checkboxes__items">
                     <p class="checkboxes__item">
                       {%- for item in content_types %}
                       {%- if item.type === 'dataset_landing_page' %}
                       <span class="checkbox checkbox--toggle">
                         <input type="checkbox" id="{{item.type}}" class="focus:ring-gray-500 h-5 w-5 text-gray-600 border-gray-300 rounded" value="{{item.type}}" data-filter="{{item.type}}">
-                        <label class="text-base" for="{{item.type}}" id="{{item.type}}_label">{{item.type | capitalize}} ({{- item.count -}})
+                        <label class="text-base" for="{{item.type}}" id="{{item.type}}_label">{{item.type | capitalize | replace("_"," ")}} ({{- item.count -}})
                         </label>
                       </span>
                       {% endif -%}
@@ -74,24 +74,10 @@
               <h3 class="mb-2 p-0 text-md font-bold">
                 <a href="https://www.ons.gov.uk{{item.uri}}">{{item.description.title}}</a>{%if item.description.latest_release === true%} <span class="font-normal">(Latest&nbsp;release)</span>{%endif%}</h3>
                 <p><span class="font-bold">Released:</span> {{item.description.release_date | truncate(10,true,"") | replace("-","/")}}  |  <span class="font-bold">{{item.type | capitalize | replace("_"," ")}}</span></p>
-                <p>{%-if item.description.summary-%}{{item.description.summary | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>") | safe}}{%-else-%}{{item.description.meta_description | replace(search_phrase, "<span style=\"background:#f0f762;padding:0 2px;\">"+search_phrase+"</span>")|safe}}{%-endif-%}</p>
+                <p>{%-if item.description.summary-%}{{item.description.summary | replace(search_phrase, '<span class="highlight">'+search_phrase+'</span>') | safe}}{%-else-%}{{item.description.meta_description | replace(search_phrase, '<span class="highlight">'+search_phrase+'</span>')|safe}}{%-endif-%}</p>
             </li>
             {% endfor %}
             </ul>
-            {# {% if area.children | length %}
-                <ul class="list-none text-base leading-relaxed m-0 p-0">
-                    {% for child in area.children %}
-                        <li class="m-0 p-0">
-                            <a href="{{child.permalink}}" class="text-base">{{child.name}}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <div class="border-2 border-grey4 p-4 mt-4">
-                    <span class="">No data for countries found. Please run</span>
-                    <code class="bg-grey5 p-2 ml-1">yarn build:geo</code>
-                </div>
-            {% endif %} #}
         </div>
         
         </div>
